@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./multileveldropdown.css";
 
 type Categories = {
   [key: string]: string[];

@@ -18,6 +18,7 @@
 .filter-contents {
   display: flex;
   justify-content: space-between;
+  border-top: 2px solid black;
 }
 
 .meal-tags {
