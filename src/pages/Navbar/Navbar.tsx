@@ -1,4 +1,5 @@
 import "./navbar.css";
+import MultiLevelDropdown from "../MultiLevelDropdown/MultiLevelDropdown";
 
 export const Navbar = () => {
   return (
@@ -9,12 +10,7 @@ export const Navbar = () => {
         <input className="search-bar"></input>
         <div className="filter-container">
           {/* Browse categories */}
-          <label htmlFor="categories">All Recipes</label>
-          <select name="categories">
-            <option>Cuisine</option>
-            <option>Ingredient</option>
-            <option>Season</option>
-          </select>
+          {MultiLevelDropdown()}
           {/* Browse meals */}
           <div className="meal-tags">
             <a>Breakfast</a>
