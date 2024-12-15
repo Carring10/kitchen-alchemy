@@ -10,8 +10,8 @@ const MultiLevelDropdown = () => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
   const categories: Categories = {
-    Cuisine: ["Italian", "Mexican", "Indian", "Chinese"],
-    Ingredient: ["Vegetables", "Meat", "Dairy", "Grains"],
+    Cuisine: ["Southern", "Latin", "Asian", "European"],
+    Ingredient: ["Beef", "Chicken", "Pork", "Pasta", "Vegetable-Based"],
     Season: ["Summer", "Winter", "Spring", "Autumn"],
   };
   
