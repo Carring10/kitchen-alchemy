@@ -20,7 +20,6 @@ const MultiLevelDropdown = () => {
   };
 
   const handleCategoryClick = (category: string) => {
-    console.log(category);
     setActiveCategory(activeCategory === category ? null : category);
   };
 
