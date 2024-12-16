@@ -26,8 +26,9 @@
         "dinner"
       ],
       "cuisine": [
-        "vegetable-based"
+        "southern"
       ],
+      "ingredient": "vegetable-based",
       "season": [
         "winter",
         "autumn"
@@ -38,26 +39,29 @@
     "ingredients": [],
     "instructions": [],
     "tags": {
-      "meal": [],
-      "cuisine": [],
-      "season": []
+      "meal": ["dinner"],
+      "cuisine": ["southern"],
+      "ingredient": "chicken",
+      "season": ["autumn", "winter"]
     }
   },
   "Roasted Carrot & Ginger Soup": {
     "ingredients": [],
     "instructions": [],
     "tags": {
-      "meal": [],
-      "cuisine": [],
-      "season": []
+      "meal": ["lunch", "dinner"],
+      "cuisine": ["southern"],
+      "ingredient": "vegetable-based",
+      "season": ["autumn", "winter"]
     }
   },
   "Air Fryer Honey Mustard Salmon": {
     "ingredients": [],
     "instructions": [],
     "tags": {
-      "meal": [],
+      "meal": ["dinner"],
       "cuisine": [],
+      "ingredient": "fish",
       "season": []
     }
   },
@@ -65,8 +69,9 @@
     "ingredients": [],
     "instructions": [],
     "tags": {
-      "meal": [],
-      "cuisine": [],
+      "meal": ["dinner"],
+      "cuisine": ["european"],
+      "ingredient": "vegetable-based",
       "season": []
     }
   },
@@ -74,17 +79,19 @@
     "ingredients": [],
     "instructions": [],
     "tags": {
-      "meal": [],
+      "meal": ["lunch", "dinner"],
       "cuisine": [],
-      "season": []
+      "ingredient": "chicken",
+      "season": ["summer", "spring"]
     }
   },
   "Baked Cajun Cabbage and Sausage": {
     "ingredients": [],
     "instructions": [],
     "tags": {
-      "meal": [],
-      "cuisine": [],
+      "meal": ["dinner"],
+      "cuisine": ["southern"],
+      "ingredient": "pork",
       "season": []
     }
   },
@@ -92,8 +99,9 @@
     "ingredients": [],
     "instructions": [],
     "tags": {
-      "meal": [],
+      "meal": ["dinner"],
       "cuisine": [],
+      "ingredient": "pork",
       "season": []
     }
   },
@@ -101,8 +109,9 @@
     "ingredients": [],
     "instructions": [],
     "tags": {
-      "meal": [],
-      "cuisine": [],
+      "meal": ["breakfast"],
+      "cuisine": ["asian"],
+      "ingredient": "",
       "season": []
     }
   },
@@ -110,8 +119,9 @@
     "ingredients": [],
     "instructions": [],
     "tags": {
-      "meal": [],
+      "meal": ["breakfast"],
       "cuisine": [],
+      "ingredient": "pork",
       "season": []
     }
   },
@@ -119,17 +129,19 @@
     "ingredients": [],
     "instructions": [],
     "tags": {
-      "meal": [],
-      "cuisine": [],
-      "season": []
+      "meal": ["lunch", "dinner"],
+      "cuisine": ["european"],
+      "ingredient": "pasta",
+      "season": ["spring", "summer"]
     }
   },
   "Creamy Orzo and Chicken": {
     "ingredients": [],
     "instructions": [],
     "tags": {
-      "meal": [],
+      "meal": ["dinner"],
       "cuisine": [],
+      "ingredient": "chicken",
       "season": []
     }
   },
@@ -137,8 +149,9 @@
     "ingredients": [],
     "instructions": [],
     "tags": {
-      "meal": [],
+      "meal": ["lunch", "dinner"],
       "cuisine": [],
+      "ingredient": "vegetable-based",
       "season": []
     }
   }

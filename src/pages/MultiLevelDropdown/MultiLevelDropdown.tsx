@@ -11,7 +11,7 @@ const MultiLevelDropdown = () => {
 
   const categories: Categories = {
     Cuisine: ["Southern", "Latin", "Asian", "European"],
-    Ingredient: ["Beef", "Chicken", "Pork", "Pasta", "Vegetable-Based"],
+    Ingredient: ["Beef", "Chicken", "Pork", "Fish", "Pasta", "Vegetable-Based"],
     Season: ["Summer", "Winter", "Spring", "Autumn"],
   };
   

@@ -1,7 +1,21 @@
 import "./navbar.css";
 import MultiLevelDropdown from "../MultiLevelDropdown/MultiLevelDropdown";
+import { useState, useEffect, MouseEvent } from "react";
 
 export const Navbar = () => {
+  const [meal, setMeal] = useState("");
+
+  const handleMealClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (event.target instanceof HTMLAnchorElement) {
+      const target = event.target as HTMLAnchorElement;
+      setMeal(target.textContent || "");
+    }
+  };
+
+  useEffect(() => {
+    console.log(meal);
+  }, [meal]);
+
   return (
     <>
       <div className="navbar">
@@ -16,11 +30,11 @@ export const Navbar = () => {
           {/* Browse meals */}
           <div className="meal-tags">
             <a>Browse by Meal: </a>
-            <a>Breakfast</a>
-            <a>Salad</a>
-            <a>Soup</a>
-            <a>Lunch</a>
-            <a>Dinner</a>
+            <a onClick={(event) => handleMealClick(event)}>Breakfast</a>
+            <a onClick={(event) => handleMealClick(event)}>Salad</a>
+            <a onClick={(event) => handleMealClick(event)}>Soup</a>
+            <a onClick={(event) => handleMealClick(event)}>Lunch</a>
+            <a onClick={(event) => handleMealClick(event)}>Dinner</a>
           </div>
         </div>
       </div>

@@ -3,13 +3,19 @@ import recipes from "../../utils/recipes.json";
 interface Recipe {
   ingredients: string[];
   instructions: string[];
+  tags: {
+    meal: string[];
+    cuisine: string[];
+    ingredient: string;
+    season: string[];
+  }
 }
 
 export const RecipeList = () => {
   return (
     <div>
       {Object.entries(recipes).map(([recipeName, recipeData]) => {
-        const { ingredients, instructions } = recipeData as Recipe;
+        const { ingredients, instructions, tags } = recipeData as Recipe;
 
         return (
           <div key={recipeName} style={{ marginBottom: "20px" }}>
