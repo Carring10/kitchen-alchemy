@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import recipes from "../../utils/recipes.json";
+import { AuthContext } from "../../Context/authContext";
 
 interface Recipe {
   ingredients: string[];
@@ -8,10 +10,13 @@ interface Recipe {
     cuisine: string[];
     ingredient: string;
     season: string[];
-  }
+  };
 }
 
 export const RecipeList = () => {
+  const { selectedMeal } = useContext(AuthContext);
+  console.log(selectedMeal);
+
   return (
     <div>
       {Object.entries(recipes).map(([recipeName, recipeData]) => {

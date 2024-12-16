@@ -3,7 +3,7 @@ import MultiLevelDropdown from "../MultiLevelDropdown/MultiLevelDropdown";
 import { useState, useEffect, MouseEvent } from "react";
 
 export const Navbar = () => {
-  const [meal, setMeal] = useState("");
+  const [meal, setMeal] = useState("Salad");
 
   const handleMealClick = (event: MouseEvent<HTMLAnchorElement>) => {
     if (event.target instanceof HTMLAnchorElement) {
@@ -13,7 +13,7 @@ export const Navbar = () => {
   };
 
   useEffect(() => {
-    console.log(meal);
+    sessionStorage.setItem("meal", meal);
   }, [meal]);
 
   return (
