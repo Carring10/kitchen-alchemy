@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { AuthContextProvider } from "./Context/authContext";
+import { MealContextProvider } from "./Context/mealContext";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <AuthContextProvider>
+    <MealContextProvider>
       <App />
-    </AuthContextProvider>
+    </MealContextProvider>
   </React.StrictMode>
 );

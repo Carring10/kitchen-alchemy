@@ -1,20 +1,18 @@
 import "./navbar.css";
 import MultiLevelDropdown from "../MultiLevelDropdown/MultiLevelDropdown";
-import { useState, useEffect, MouseEvent } from "react";
+import { MouseEvent, useContext } from "react";
+import { MealContext } from "../../Context/mealContext";
 
 export const Navbar = () => {
-  const [meal, setMeal] = useState("Salad");
+  const { setSelectedMeal } = useContext(MealContext);
 
   const handleMealClick = (event: MouseEvent<HTMLAnchorElement>) => {
     if (event.target instanceof HTMLAnchorElement) {
-      const target = event.target as HTMLAnchorElement;
-      setMeal(target.textContent || "");
+      const mealName = event.target.textContent || "";
+      setSelectedMeal(mealName); // Update MealContext
+      sessionStorage.setItem("meal", mealName);
     }
   };
-
-  useEffect(() => {
-    sessionStorage.setItem("meal", meal);
-  }, [meal]);
 
   return (
     <>
