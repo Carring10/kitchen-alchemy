@@ -4,13 +4,19 @@ import { MouseEvent, useContext } from "react";
 import { MealContext } from "../../Context/mealContext";
 
 export const Navbar = () => {
-  const { setSelectedMeal } = useContext(MealContext);
+  const { selectedMeal, setSelectedMeal } = useContext(MealContext);
 
   const handleMealClick = (event: MouseEvent<HTMLAnchorElement>) => {
     if (event.target instanceof HTMLAnchorElement) {
       const mealName = event.target.textContent || "";
+      
       setSelectedMeal(mealName); // Update MealContext
       sessionStorage.setItem("meal", mealName);
+
+      if (selectedMeal === mealName) {
+        sessionStorage.setItem("meal", "");
+        setSelectedMeal(""); 
+      }
     }
   };
 

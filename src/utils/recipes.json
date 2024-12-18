@@ -49,7 +49,7 @@
     "ingredients": [],
     "instructions": [],
     "tags": {
-      "meal": ["lunch", "dinner"],
+      "meal": ["lunch", "dinner", "soup"],
       "cuisine": ["southern"],
       "ingredient": "vegetable-based",
       "season": ["autumn", "winter"]
