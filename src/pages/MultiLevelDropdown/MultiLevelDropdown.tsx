@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./multileveldropdown.css";
 import { MouseEvent, useContext } from "react";
 import { MealContext } from "../../Context/mealContext";
@@ -10,31 +10,33 @@ type Categories = {
 const MultiLevelDropdown = () => {
   const { selectedSubCat, setSelectedSubCat } = useContext(MealContext);
   const [dropdownMenu, setdropdownMenu] = useState<true | null>(null);
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string | "">("");
 
   const categories: Categories = {
     Cuisine: ["Southern", "Latin", "Asian", "European"],
     Ingredient: ["Beef", "Chicken", "Pork", "Fish", "Pasta", "Vegetable-Based"],
     Season: ["Summer", "Winter", "Spring", "Autumn"],
   };
-  
+
   const handleDropdownClick = () => {
     setdropdownMenu(dropdownMenu === true ? null : true);
   };
 
   const handleCategoryClick = (category: string) => {
-    setActiveCategory(activeCategory === category ? null : category);
+    setActiveCategory(activeCategory === category ? "" : category);
   };
 
   const handleSubCategoryClick = (event: MouseEvent<HTMLLIElement>) => {
     if (event.target instanceof HTMLLIElement) {
       const subCat = event.target.textContent || "";
 
-      setSelectedSubCat(subCat);
-      sessionStorage.setItem("subCategory", subCat);
+      setSelectedSubCat({ subCat, activeCategory });
+      sessionStorage.setItem(
+        "subCategory",
+        JSON.stringify({ subCat, activeCategory })
+      );
     }
-  }
-
+  };
 
   const showCategories = () => {
     return (
@@ -52,7 +54,11 @@ const MultiLevelDropdown = () => {
             {activeCategory === category && (
               <ul className="subcategory-list">
                 {categories[category].map((subCategory) => (
-                  <li key={subCategory} className="subcategory-item" onClick={(event) => handleSubCategoryClick(event)}>
+                  <li
+                    key={subCategory}
+                    className="subcategory-item"
+                    onClick={(event) => handleSubCategoryClick(event)}
+                  >
                     {subCategory}
                   </li>
                 ))}

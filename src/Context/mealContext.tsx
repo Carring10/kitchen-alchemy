@@ -4,8 +4,8 @@ import React, { createContext, useEffect, useState, ReactNode } from "react";
 interface MealContextProps {
   selectedMeal: string;
   setSelectedMeal: (meal: string) => void;
-  selectedSubCat: string;
-  setSelectedSubCat: (subCategory: string) => void;
+  selectedSubCat: { subCat: string; activeCategory: string };
+  setSelectedSubCat: (subCategory: { subCat: string; activeCategory: string }) => void;
 }
 
 // Create the context with default values
@@ -13,7 +13,7 @@ interface MealContextProps {
 export const MealContext = createContext<MealContextProps>({
   selectedMeal: "",
   setSelectedMeal: () => {},
-  selectedSubCat: "",
+  selectedSubCat: { subCat: "", activeCategory: "" },
   setSelectedSubCat: () => {}
 });
 
@@ -27,9 +27,10 @@ export const MealContextProvider: React.FC<MealContextProviderProps> = ({ childr
     () => sessionStorage.getItem("meal") || ""
   );
 
-  const [selectedSubCat, setSelectedSubCat] = useState(
-    () => sessionStorage.getItem("subCategory") || ""
-  );
+  const [selectedSubCat, setSelectedSubCat] = useState(() => {
+    const storedSubCat = sessionStorage.getItem("subCategory");
+    return storedSubCat ? JSON.parse(storedSubCat) : { subCat: "", activeCategory: "" };
+  });
 
   // Sync the selectedMeal state with sessionStorage
   useEffect(() => {
@@ -37,7 +38,7 @@ export const MealContextProvider: React.FC<MealContextProviderProps> = ({ childr
   }, [selectedMeal]);
 
   useEffect(() => {
-    sessionStorage.setItem("subCategory", selectedSubCat);
+    sessionStorage.setItem("subCategory", JSON.stringify(selectedSubCat));
   }, [selectedSubCat]);
   
   return (

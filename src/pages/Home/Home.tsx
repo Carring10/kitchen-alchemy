@@ -6,7 +6,6 @@ export const Home = () => {
   return (
     <>
       <Navbar />
-      <h1>All Recipes</h1>
       <RecipeList />
     </>
   );

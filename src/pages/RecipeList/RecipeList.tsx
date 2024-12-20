@@ -14,20 +14,24 @@ interface Recipe {
 }
 
 export const RecipeList = () => {
-  const { selectedMeal } = useContext(MealContext);
+  const { selectedMeal, selectedSubCat } = useContext(MealContext);
 
   // Filter recipes based on selectedMeal
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const filteredRecipes = Object.entries(recipes).filter(([_, recipeData]) => {
     const { tags } = recipeData as Recipe;
+    console.log(tags);
 
-    return selectedMeal
+    const matchMeal = selectedMeal
       ? tags.meal?.some((meal) => meal.toLowerCase() === selectedMeal.toLowerCase())
       : true;
+
+    return matchMeal;
   });
 
   return (
     <div>
+      {selectedMeal ? <h1>{selectedMeal}</h1> : <h1>All Recipes</h1>}
       {filteredRecipes.length > 0 ? (
         filteredRecipes.map(([recipeName, recipeData]) => {
           const { ingredients, instructions } = recipeData as Recipe;
