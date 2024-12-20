@@ -1,11 +1,14 @@
 import { useState } from "react";
 import "./multileveldropdown.css";
+import { MouseEvent, useContext } from "react";
+import { MealContext } from "../../Context/mealContext";
 
 type Categories = {
   [key: string]: string[];
 };
 
 const MultiLevelDropdown = () => {
+  const { selectedSubCat, setSelectedSubCat } = useContext(MealContext);
   const [dropdownMenu, setdropdownMenu] = useState<true | null>(null);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
@@ -23,10 +26,20 @@ const MultiLevelDropdown = () => {
     setActiveCategory(activeCategory === category ? null : category);
   };
 
+  const handleSubCategoryClick = (event: MouseEvent<HTMLLIElement>) => {
+    if (event.target instanceof HTMLLIElement) {
+      const subCat = event.target.textContent || "";
+
+      setSelectedSubCat(subCat);
+      sessionStorage.setItem("subCategory", subCat);
+    }
+  }
+
 
   const showCategories = () => {
     return (
       <div className="dropdown-menu">
+        <button className="category-button">View All</button>
         {Object.keys(categories).map((category) => (
           <div key={category} className="dropdown-item">
             <button
@@ -39,7 +52,7 @@ const MultiLevelDropdown = () => {
             {activeCategory === category && (
               <ul className="subcategory-list">
                 {categories[category].map((subCategory) => (
-                  <li key={subCategory} className="subcategory-item">
+                  <li key={subCategory} className="subcategory-item" onClick={(event) => handleSubCategoryClick(event)}>
                     {subCategory}
                   </li>
                 ))}

@@ -4,6 +4,8 @@ import React, { createContext, useEffect, useState, ReactNode } from "react";
 interface MealContextProps {
   selectedMeal: string;
   setSelectedMeal: (meal: string) => void;
+  selectedSubCat: string;
+  setSelectedSubCat: (subCategory: string) => void;
 }
 
 // Create the context with default values
@@ -11,6 +13,8 @@ interface MealContextProps {
 export const MealContext = createContext<MealContextProps>({
   selectedMeal: "",
   setSelectedMeal: () => {},
+  selectedSubCat: "",
+  setSelectedSubCat: () => {}
 });
 
 interface MealContextProviderProps {
@@ -23,13 +27,21 @@ export const MealContextProvider: React.FC<MealContextProviderProps> = ({ childr
     () => sessionStorage.getItem("meal") || ""
   );
 
+  const [selectedSubCat, setSelectedSubCat] = useState(
+    () => sessionStorage.getItem("subCategory") || ""
+  );
+
   // Sync the selectedMeal state with sessionStorage
   useEffect(() => {
     sessionStorage.setItem("meal", selectedMeal);
   }, [selectedMeal]);
+
+  useEffect(() => {
+    sessionStorage.setItem("subCategory", selectedSubCat);
+  }, [selectedSubCat]);
   
   return (
-    <MealContext.Provider value={{ selectedMeal, setSelectedMeal }}>
+    <MealContext.Provider value={{ selectedMeal, setSelectedMeal, selectedSubCat, setSelectedSubCat }}>
       {children}
     </MealContext.Provider>
   );
