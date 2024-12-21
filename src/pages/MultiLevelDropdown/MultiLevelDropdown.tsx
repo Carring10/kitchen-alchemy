@@ -22,6 +22,14 @@ const MultiLevelDropdown = () => {
     setdropdownMenu(dropdownMenu === true ? null : true);
   };
 
+  const handleViewAllClick = (event: MouseEvent<HTMLButtonElement>) => {
+    if (event.target instanceof HTMLButtonElement) {
+      console.log("here");
+      setSelectedSubCat({ subCat: "", activeCategory: "" });
+      sessionStorage.removeItem("subCategory");
+    }
+  };
+
   const handleCategoryClick = (category: string) => {
     setActiveCategory(activeCategory === category ? "" : category);
   };
@@ -31,17 +39,19 @@ const MultiLevelDropdown = () => {
       const subCat = event.target.textContent || "";
 
       setSelectedSubCat({ subCat, activeCategory });
-      sessionStorage.setItem(
-        "subCategory",
-        JSON.stringify({ subCat, activeCategory })
-      );
+      sessionStorage.setItem("subCategory", JSON.stringify({ subCat, activeCategory }));
     }
   };
 
   const showCategories = () => {
     return (
       <div className="dropdown-menu">
-        <button className="category-button">View All</button>
+        <button
+          className="category-button"
+          onClick={(event) => handleViewAllClick(event)}
+        >
+          View All
+        </button>
         {Object.keys(categories).map((category) => (
           <div key={category} className="dropdown-item">
             <button
