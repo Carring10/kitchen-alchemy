@@ -13,20 +13,33 @@ interface Recipe {
   };
 }
 
+type TagCategory = "cuisine" | "ingredient" | "season"; // Define valid tag categories
+
 export const RecipeList = () => {
   const { selectedMeal, selectedSubCat } = useContext(MealContext);
+
+  const category = selectedSubCat?.activeCategory?.toLowerCase() as TagCategory; // Explicit type cast
+  const subCategory = selectedSubCat?.subCat?.toLowerCase();
 
   // Filter recipes based on selectedMeal
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const filteredRecipes = Object.entries(recipes).filter(([_, recipeData]) => {
     const { tags } = recipeData as Recipe;
-    console.log(tags);
 
     const matchMeal = selectedMeal
       ? tags.meal?.some((meal) => meal.toLowerCase() === selectedMeal.toLowerCase())
       : true;
+    // Match category and subcategory
+    const matchCategory =
+      category && subCategory
+        ? Array.isArray(tags[category]) // Ensure the category is an array
+          ? (tags[category] as string[]).some((tag) => tag.toLowerCase() === subCategory)
+          : (tags[category] as string)?.toLowerCase() === subCategory
+        : true;
 
-    return matchMeal;
+      console.log(tags[category]);
+
+    return matchMeal && matchCategory;
   });
 
   return (
