@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./multileveldropdown.css";
 import { MouseEvent, useContext } from "react";
 import { MealContext } from "../../Context/mealContext";
@@ -8,7 +8,7 @@ type Categories = {
 };
 
 const MultiLevelDropdown = () => {
-  const { selectedSubCat, setSelectedSubCat } = useContext(MealContext);
+  const { setSelectedSubCat } = useContext(MealContext);
   const [dropdownMenu, setdropdownMenu] = useState<true | null>(null);
   const [activeCategory, setActiveCategory] = useState<string | "">("");
 
@@ -24,7 +24,6 @@ const MultiLevelDropdown = () => {
 
   const handleViewAllClick = (event: MouseEvent<HTMLButtonElement>) => {
     if (event.target instanceof HTMLButtonElement) {
-      console.log("here");
       setSelectedSubCat({ subCat: "", activeCategory: "" });
       sessionStorage.removeItem("subCategory");
     }

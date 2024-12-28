@@ -9,13 +9,13 @@ export const Navbar = () => {
   const handleMealClick = (event: MouseEvent<HTMLAnchorElement>) => {
     if (event.target instanceof HTMLAnchorElement) {
       const mealName = event.target.textContent || "";
-      
+
       setSelectedMeal(mealName); // Update MealContext
       sessionStorage.setItem("meal", mealName);
 
       if (selectedMeal === mealName) {
         sessionStorage.setItem("meal", "");
-        setSelectedMeal(""); 
+        setSelectedMeal("");
       }
     }
   };
@@ -33,12 +33,20 @@ export const Navbar = () => {
           {MultiLevelDropdown()}
           {/* Browse meals */}
           <div className="meal-tags">
-            <a>Browse by Meal: </a>
-            <a onClick={(event) => handleMealClick(event)}>Breakfast</a>
-            <a onClick={(event) => handleMealClick(event)}>Salad</a>
-            <a onClick={(event) => handleMealClick(event)}>Soup</a>
-            <a onClick={(event) => handleMealClick(event)}>Lunch</a>
-            <a onClick={(event) => handleMealClick(event)}>Dinner</a>
+            <p>Browse by Meal: </p>
+            {["Breakfast", "Salad", "Soup", "Lunch", "Dinner"].map((meal) => (
+              <a
+                key={meal}
+                href="#"
+                onClick={handleMealClick}
+                style={{
+                  border: selectedMeal === meal ? "1px solid black" : "none",
+                  backgroundColor: selectedMeal === meal ? "#dbe8d7" : "transparent",
+                }}
+              >
+                {meal}
+              </a>
+            ))}
           </div>
         </div>
       </div>

@@ -19,9 +19,30 @@
   display: flex;
   justify-content: space-between;
   border-top: 2px solid black;
+  padding: 8px;
 }
 
 .meal-tags {
   display: flex;
   gap: 60px;
+}
+
+.meal-tags p {
+  margin: 0px;
+  padding: 5px;
+}
+
+.meal-tags a {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid transparent; 
+  transition: .3s;
+  text-decoration: none;
+  color: black;
+}
+
+.meal-tags a:hover {
+  border: 1px solid black;
+  background-color: #dbe8d7;
+  transition: .3s;
 }
