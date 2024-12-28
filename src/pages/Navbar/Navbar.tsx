@@ -39,10 +39,7 @@ export const Navbar = () => {
                 key={meal}
                 href="#"
                 onClick={handleMealClick}
-                style={{
-                  border: selectedMeal === meal ? "1px solid black" : "none",
-                  backgroundColor: selectedMeal === meal ? "#dbe8d7" : "transparent",
-                }}
+                className={selectedMeal === meal ? "selected" : ""}
               >
                 {meal}
               </a>
