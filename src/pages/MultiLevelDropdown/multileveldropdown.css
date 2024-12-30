@@ -1,3 +1,5 @@
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -19,6 +21,8 @@
 }
 
 .category-button {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   text-align: left;
   background: none;
@@ -29,16 +33,24 @@
   outline: none;
 }
 
+#right-arrow {
+  font-size: 12px;
+}
+
 .category-button:hover {
-  background-color: #f0f0f0;
+  background-color: #dbe8d7;
 }
 
 .subcategory-list {
+  background-color: white;
   list-style-type: none;
   margin: 0;
   padding: 0;
   margin-top: 4px;
-  border-top: 1px solid #ccc;
+  border: 1px solid #ccc;
+  position: absolute;
+  left: 209px;
+  top: 1px;
 }
 
 .subcategory-item {
@@ -46,6 +58,6 @@
 }
 
 .subcategory-item:hover {
-  background-color: #e0e0e0;
+  background-color: #dbe8d7;
   cursor: pointer;
 }

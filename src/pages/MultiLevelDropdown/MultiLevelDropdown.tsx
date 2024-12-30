@@ -59,6 +59,7 @@ const MultiLevelDropdown = () => {
               onClick={() => handleCategoryClick(category)}
             >
               {category}
+              <i className='bx bxs-right-arrow' id="right-arrow"></i>
             </button>
             {activeCategory === category && (
               <ul className="subcategory-list">
