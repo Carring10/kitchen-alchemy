@@ -5,6 +5,17 @@
   display: inline-block;
 }
 
+#all-recipes.selected {
+  border: 1px solid black;
+  background-color: #dbe8d7;
+}
+
+#all-recipes:hover {
+  border: 1px solid black;
+  background-color: #dbe8d7;
+  transition: .3s;
+}
+
 .dropdown-menu {
   position: absolute;
   display: flex;

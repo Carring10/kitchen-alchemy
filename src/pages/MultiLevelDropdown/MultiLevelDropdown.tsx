@@ -19,7 +19,7 @@ const MultiLevelDropdown = () => {
   };
 
   const handleDropdownMouseOver = () => {
-    setdropdownMenu(dropdownMenu === true ? null : true);
+    setdropdownMenu(true);
   };
 
   const handleViewAllClick = (event: MouseEvent<HTMLButtonElement>) => {
@@ -27,6 +27,8 @@ const MultiLevelDropdown = () => {
       setSelectedSubCat({ subCat: "", activeCategory: "" });
       sessionStorage.removeItem("subCategory");
     }
+
+    handleMenuLeave();
   };
 
   const handleCategoryMouseOver = (category: string) => {
@@ -93,8 +95,8 @@ const MultiLevelDropdown = () => {
   };
 
   return (
-    <div className="dropdown">
-      <label htmlFor="categories" onMouseOver={() => handleDropdownMouseOver()}>
+    <div className="dropdown" onMouseLeave={handleMenuLeave}>
+      <label htmlFor="categories" onMouseOver={() => handleDropdownMouseOver()} id="all-recipes" className={dropdownMenu ? "selected" : ""}>
         All Recipes
       </label>
       {dropdownMenu && showCategories()}

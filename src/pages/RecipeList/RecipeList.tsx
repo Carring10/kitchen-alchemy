@@ -20,7 +20,6 @@ export const RecipeList = () => {
 
   const category = selectedSubCat?.activeCategory?.toLowerCase() as TagCategory; // Explicit type cast
   const subCategory = selectedSubCat?.subCat?.toLowerCase();
-  console.log(subCategory)
 
   const capitalizedSubCat = subCategory.charAt(0).toUpperCase() + subCategory.slice(1);
 
