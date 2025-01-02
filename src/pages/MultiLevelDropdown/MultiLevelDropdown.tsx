@@ -33,21 +33,24 @@ const MultiLevelDropdown = () => {
     setActiveCategory(category);
   };
 
-  const handleSubCategoryClick = (event: MouseEvent<HTMLLIElement>) => {
-    if (event.target instanceof HTMLLIElement) {
-      const subCat = event.target.textContent || "";
-
-      setSelectedSubCat({ subCat, activeCategory });
-      sessionStorage.setItem("subCategory", JSON.stringify({ subCat, activeCategory }));
-    }
+  const handleCatLeave = () => {
+    setActiveCategory("");
   };
 
   const handleMenuLeave = () => {
     setdropdownMenu(null);
   };
 
-  const handleCatLeave = () => {
-    setActiveCategory("");
+  const handleSubCategoryClick = (event: MouseEvent<HTMLLIElement>) => {
+    if (event.target instanceof HTMLLIElement) {
+      const subCat = event.target.textContent || "";
+
+      setSelectedSubCat({ subCat, activeCategory });
+      sessionStorage.setItem("subCategory", JSON.stringify({ subCat, activeCategory }));
+
+      handleCatLeave();
+      handleMenuLeave();
+    }
   };
 
   const showCategories = () => {

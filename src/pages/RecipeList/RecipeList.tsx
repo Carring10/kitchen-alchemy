@@ -20,6 +20,9 @@ export const RecipeList = () => {
 
   const category = selectedSubCat?.activeCategory?.toLowerCase() as TagCategory; // Explicit type cast
   const subCategory = selectedSubCat?.subCat?.toLowerCase();
+  console.log(subCategory)
+
+  const capitalizedSubCat = subCategory.charAt(0).toUpperCase() + subCategory.slice(1);
 
   // Filter recipes based on selectedMeal
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -44,7 +47,7 @@ export const RecipeList = () => {
 
   return (
     <div>
-      {selectedMeal ? <h1>{selectedMeal}</h1> : <h1>All Recipes</h1>}
+      {selectedMeal || subCategory ? <h1>{selectedMeal ? selectedMeal : null} {selectedMeal && subCategory ? "+" : null} {subCategory ? capitalizedSubCat : null}</h1> : <h1>All Recipes</h1>}
       {filteredRecipes.length > 0 ? (
         filteredRecipes.map(([recipeName, recipeData]) => {
           const { ingredients, instructions } = recipeData as Recipe;
