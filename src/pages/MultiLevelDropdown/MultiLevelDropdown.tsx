@@ -56,6 +56,7 @@ const MultiLevelDropdown = () => {
         <button
           className="category-button"
           onClick={(event) => handleViewAllClick(event)}
+          onMouseOver={handleCatLeave}
         >
           View All
         </button>
@@ -65,7 +66,6 @@ const MultiLevelDropdown = () => {
               type="button"
               className="category-button"
               onMouseOver={() => handleCategoryMouseOver(category)}
-              onMouseLeave={handleCatLeave}
             >
               {category}
               <i className="bx bxs-right-arrow" id="right-arrow"></i>
