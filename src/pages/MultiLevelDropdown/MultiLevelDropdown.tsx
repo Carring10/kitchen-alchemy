@@ -18,7 +18,7 @@ const MultiLevelDropdown = () => {
     Season: ["Summer", "Winter", "Spring", "Autumn"],
   };
 
-  const handleDropdownClick = () => {
+  const handleDropdownMouseOver = () => {
     setdropdownMenu(dropdownMenu === true ? null : true);
   };
 
@@ -29,8 +29,8 @@ const MultiLevelDropdown = () => {
     }
   };
 
-  const handleCategoryClick = (category: string) => {
-    setActiveCategory(activeCategory === category ? "" : category);
+  const handleCategoryMouseOver = (category: string) => {
+    setActiveCategory(category);
   };
 
   const handleSubCategoryClick = (event: MouseEvent<HTMLLIElement>) => {
@@ -42,9 +42,17 @@ const MultiLevelDropdown = () => {
     }
   };
 
+  const handleMenuLeave = () => {
+    setdropdownMenu(null);
+  };
+
+  const handleCatLeave = () => {
+    setActiveCategory("");
+  };
+
   const showCategories = () => {
     return (
-      <div className="dropdown-menu">
+      <div className="dropdown-menu" onMouseLeave={handleMenuLeave}>
         <button
           className="category-button"
           onClick={(event) => handleViewAllClick(event)}
@@ -56,10 +64,11 @@ const MultiLevelDropdown = () => {
             <button
               type="button"
               className="category-button"
-              onClick={() => handleCategoryClick(category)}
+              onMouseOver={() => handleCategoryMouseOver(category)}
+              onMouseLeave={handleCatLeave}
             >
               {category}
-              <i className='bx bxs-right-arrow' id="right-arrow"></i>
+              <i className="bx bxs-right-arrow" id="right-arrow"></i>
             </button>
             {activeCategory === category && (
               <ul className="subcategory-list">
@@ -82,7 +91,7 @@ const MultiLevelDropdown = () => {
 
   return (
     <div className="dropdown">
-      <label htmlFor="categories" onClick={() => handleDropdownClick()}>
+      <label htmlFor="categories" onMouseOver={() => handleDropdownMouseOver()}>
         All Recipes
       </label>
       {dropdownMenu && showCategories()}
