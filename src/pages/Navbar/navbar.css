@@ -3,6 +3,8 @@
   flex-direction: column;
   width: 100%;
   border-bottom: 1px solid black;
+  font-family: "Bona Nova SC", serif;
+  font-weight: 700;
 }
 
 .header {

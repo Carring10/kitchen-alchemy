@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import recipes from "../../utils/recipes.json";
 import { MealContext } from "../../Context/mealContext";
+import "./recipeList.css";
 
 interface Recipe {
   ingredients: string[];
@@ -46,7 +47,7 @@ export const RecipeList = () => {
 
   return (
     <div>
-      {selectedMeal || subCategory ? <h1>{selectedMeal ? selectedMeal : null} {selectedMeal && subCategory ? "+" : null} {subCategory ? capitalizedSubCat : null}</h1> : <h1>All Recipes</h1>}
+      {selectedMeal || subCategory ? <h1 className="recipe-list-title">{selectedMeal ? selectedMeal : null} {selectedMeal && subCategory ? "+" : null} {subCategory ? capitalizedSubCat : null}</h1> : <h1 className="recipe-list-title">All Recipes</h1>}
       {filteredRecipes.length > 0 ? (
         filteredRecipes.map(([recipeName, recipeData]) => {
           const { ingredients, instructions } = recipeData as Recipe;

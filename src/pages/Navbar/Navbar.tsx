@@ -33,8 +33,8 @@ export const Navbar = () => {
           {MultiLevelDropdown()}
           {/* Browse meals */}
           <div className="meal-tags">
-            <p>Browse by Meal: </p>
-            {["Breakfast", "Salad", "Soup", "Lunch", "Dinner"].map((meal) => (
+            <p className="emphasis">Browse by Meal: </p>
+            {["breakfast", "salad", "soup", "lunch", "dinner"].map((meal) => (
               <a
                 key={meal}
                 href="#"
