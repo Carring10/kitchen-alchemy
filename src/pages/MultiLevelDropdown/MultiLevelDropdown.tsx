@@ -8,7 +8,7 @@ type Categories = {
 };
 
 const MultiLevelDropdown = () => {
-  const { setSelectedSubCat } = useContext(MealContext);
+  const { setSelectedSubCat, setSelectedMeal } = useContext(MealContext);
   const [dropdownMenu, setdropdownMenu] = useState<true | null>(null);
   const [activeCategory, setActiveCategory] = useState<string | "">("");
 
@@ -26,6 +26,9 @@ const MultiLevelDropdown = () => {
     if (event.target instanceof HTMLButtonElement) {
       setSelectedSubCat({ subCat: "", activeCategory: "" });
       sessionStorage.removeItem("subCategory");
+
+      sessionStorage.setItem("meal", "");
+      setSelectedMeal("");
     }
 
     handleMenuLeave();
