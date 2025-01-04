@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
   font-family: "Bona Nova SC", serif;
   font-weight: 700;
 }
@@ -13,15 +13,31 @@
   align-items: center;
 }
 
+.app-header {
+  font-family: "Fleur De Leah", serif;
+  font-weight: 700;
+  font-size: 40px;
+  font-style: normal;
+}
+
+.underline {
+  border-bottom: 2px solid #d2e6cc;
+}
+
 .search-bar {
   height: 25px;
 }
 
 .filter-contents {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  border-top: 2px solid black;
+  border-top: 4px solid black;
   padding: 8px;
+}
+
+#browse-meal {
+  border-right: 1px solid black;
 }
 
 .meal-tags {

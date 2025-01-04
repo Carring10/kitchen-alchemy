@@ -99,7 +99,12 @@ const MultiLevelDropdown = () => {
 
   return (
     <div className="dropdown" onMouseLeave={handleMenuLeave}>
-      <label htmlFor="categories" onMouseOver={() => handleDropdownMouseOver()} id="all-recipes" className={dropdownMenu ? "selected" : ""}>
+      <label
+        htmlFor="categories"
+        onMouseOver={() => handleDropdownMouseOver()}
+        id="all-recipes"
+        className={dropdownMenu ? "selected" : ""}
+      >
         All Recipes
       </label>
       {dropdownMenu && showCategories()}

@@ -1,4 +1,18 @@
+
+.recipe-list-title-container {
+  display: flex;
+  align-items: center;
+}
+
 .recipe-list-title {
   font-family: "Sofia", serif;
   font-weight: 400;
+  width: 30%;
+}
+
+.content-separator {
+  background-color: black;
+  width: 100%;
+  height: 1px;
+
 }

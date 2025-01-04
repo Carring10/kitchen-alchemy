@@ -24,8 +24,8 @@ export const Navbar = () => {
     <>
       <div className="navbar">
         <div className="header">
-          <p>Cooking is a science, tasting is an art</p>
-          <h1>Kitchen Alchemy</h1>
+          <p>cooking is a <span className="underline">science</span>, tasting is an <span className="underline">art</span></p>
+          <h1 className="app-header">Kitchen Alchemy</h1>
           <input className="search-bar"></input>
         </div>
         <div className="filter-contents">
@@ -33,7 +33,7 @@ export const Navbar = () => {
           {MultiLevelDropdown()}
           {/* Browse meals */}
           <div className="meal-tags">
-            <p className="emphasis">Browse by Meal: </p>
+            <p className="emphasis" id="browse-meal">Browse by Meal</p>
             {["breakfast", "salad", "soup", "lunch", "dinner"].map((meal) => (
               <a
                 key={meal}

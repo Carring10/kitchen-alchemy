@@ -40,14 +40,25 @@ export const RecipeList = () => {
           : (tags[category] as string)?.toLowerCase() === subCategory
         : true;
 
-      console.log(tags[category]);
+    console.log(tags[category]);
 
     return matchMeal && matchCategory;
   });
 
   return (
     <div>
-      {selectedMeal || subCategory ? <h1 className="recipe-list-title">{selectedMeal ? selectedMeal : null} {selectedMeal && subCategory ? "+" : null} {subCategory ? capitalizedSubCat : null}</h1> : <h1 className="recipe-list-title">All Recipes</h1>}
+      <div className="recipe-list-title-container">
+        {selectedMeal || subCategory ? (
+          <h1 className="recipe-list-title">
+            {selectedMeal ? selectedMeal : null}{" "}
+            {selectedMeal && subCategory ? "+" : null}{" "}
+            {subCategory ? capitalizedSubCat : null}
+          </h1>
+        ) : (
+          <h1 className="recipe-list-title">All Recipes</h1>
+        )}
+        <div className="content-separator"></div>
+      </div>
       {filteredRecipes.length > 0 ? (
         filteredRecipes.map(([recipeName, recipeData]) => {
           const { ingredients, instructions } = recipeData as Recipe;
