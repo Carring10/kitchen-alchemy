@@ -64,9 +64,9 @@ export const RecipeList = () => {
           const { img } = recipeData as Recipe;
 
           return (
-            <Link to="/recipe" state={recipeData} key={recipeName}>
+            <Link to="/recipe" state={recipeData} key={recipeName} className="recipe-link">
               <div key={recipeName} style={{ marginBottom: "20px" }}>
-                <h2>{recipeName}</h2>
+                <h2 className="recipe-name">{recipeName}</h2>
                 <img src={`/images/${img}`} alt={recipeName} />
                 {/* <h3>Ingredients:</h3>
                 <ul>

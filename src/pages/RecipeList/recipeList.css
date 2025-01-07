@@ -16,3 +16,11 @@
   height: 1px;
 
 }
+
+.recipe-link {
+  text-decoration: none; 
+}
+
+.recipe-name {
+  color: black;
+}
