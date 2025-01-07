@@ -41,7 +41,7 @@ export const RecipeList = () => {
           ? (tags[category] as string[]).some((tag) => tag.toLowerCase() === subCategory)
           : (tags[category] as string)?.toLowerCase() === subCategory
         : true;
-        
+
     return matchMeal && matchCategory;
   });
 
@@ -64,22 +64,23 @@ export const RecipeList = () => {
           const { img } = recipeData as Recipe;
 
           return (
-            <Link to="/recipe" state={recipeData} key={recipeName} className="recipe-link">
-              <div key={recipeName} style={{ marginBottom: "20px" }}>
-                <h2 className="recipe-name">{recipeName}</h2>
-                <img src={`/images/${img}`} alt={recipeName} />
-                {/* <h3>Ingredients:</h3>
-                <ul>
-                  {ingredients.map((ingredient, index) => (
-                    <li key={index}>{ingredient}</li>
-                  ))}
-                </ul>
-                <h3>Instructions:</h3>
-                <ol>
-                  {instructions.map((instruction, index) => (
-                    <li key={index}>{instruction}</li>
-                  ))}
-                </ol> */}
+            <Link
+              to="/recipe"
+              state={recipeData}
+              key={recipeName}
+              className="recipe-link"
+            >
+              <div className="recipe-list-container">
+                <div key={recipeName} style={{ marginBottom: "20px" }}>
+                  <div className="recipe-list-img-container">
+                    <h2 className="recipe-name">{recipeName}</h2>
+                    <img
+                      src={`/images/${img}`}
+                      alt={recipeName}
+                      className="recipe-list-img"
+                    />
+                  </div>
+                </div>
               </div>
             </Link>
           );
