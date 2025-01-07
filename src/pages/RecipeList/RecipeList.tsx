@@ -2,6 +2,7 @@ import { useContext } from "react";
 import recipes from "../../utils/recipes.json";
 import { MealContext } from "../../Context/mealContext";
 import "./recipeList.css";
+import { Link } from "react-router-dom";
 
 interface Recipe {
   img: string;
@@ -40,9 +41,7 @@ export const RecipeList = () => {
           ? (tags[category] as string[]).some((tag) => tag.toLowerCase() === subCategory)
           : (tags[category] as string)?.toLowerCase() === subCategory
         : true;
-
-    console.log(tags[category]);
-
+        
     return matchMeal && matchCategory;
   });
 
@@ -62,26 +61,27 @@ export const RecipeList = () => {
       </div>
       {filteredRecipes.length > 0 ? (
         filteredRecipes.map(([recipeName, recipeData]) => {
-          const { img, ingredients, instructions } = recipeData as Recipe;
+          const { img } = recipeData as Recipe;
 
-          {console.log(img)}
           return (
-            <div key={recipeName} style={{ marginBottom: "20px" }}>
-              <h2>{recipeName}</h2>
-              <img src={`/images/${img}`} alt={recipeName} />
-              <h3>Ingredients:</h3>
-              <ul>
-                {ingredients.map((ingredient, index) => (
-                  <li key={index}>{ingredient}</li>
-                ))}
-              </ul>
-              <h3>Instructions:</h3>
-              <ol>
-                {instructions.map((instruction, index) => (
-                  <li key={index}>{instruction}</li>
-                ))}
-              </ol>
-            </div>
+            <Link to="/recipe" state={recipeData} key={recipeName}>
+              <div key={recipeName} style={{ marginBottom: "20px" }}>
+                <h2>{recipeName}</h2>
+                <img src={`/images/${img}`} alt={recipeName} />
+                {/* <h3>Ingredients:</h3>
+                <ul>
+                  {ingredients.map((ingredient, index) => (
+                    <li key={index}>{ingredient}</li>
+                  ))}
+                </ul>
+                <h3>Instructions:</h3>
+                <ol>
+                  {instructions.map((instruction, index) => (
+                    <li key={index}>{instruction}</li>
+                  ))}
+                </ol> */}
+              </div>
+            </Link>
           );
         })
       ) : (
