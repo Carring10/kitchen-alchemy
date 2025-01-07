@@ -1,5 +1,6 @@
 {
   "Butternut Squash Soup": {
+    "img": "placeholder-image.jpg",
     "ingredients": [
       "1 large butternut squash",
       "olive oil",
@@ -36,6 +37,7 @@
     }
   },
   "Chicken Pot Pie": {
+    "img": "placeholder-image.jpg",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -46,6 +48,7 @@
     }
   },
   "Roasted Carrot & Ginger Soup": {
+    "img": "placeholder-image.jpg",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -56,6 +59,7 @@
     }
   },
   "Air Fryer Honey Mustard Salmon": {
+    "img": "placeholder-image.jpg",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -66,6 +70,7 @@
     }
   },
   "Moussaka (Greek Eggplant Lasagna)": {
+    "img": "placeholder-image.jpg",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -76,6 +81,7 @@
     }
   },
   "Southwestern Chicken Burritos": {
+    "img": "placeholder-image.jpg",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -86,6 +92,7 @@
     }
   },
   "Baked Cajun Cabbage and Sausage": {
+    "img": "placeholder-image.jpg",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -96,6 +103,7 @@
     }
   },
   "Air Fryer Boneless Ribs": {
+    "img": "placeholder-image.jpg",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -106,6 +114,7 @@
     }
   },
   "Japanese Soft-Scrambled Eggs Over Rice": {
+    "img": "placeholder-image.jpg",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -116,6 +125,7 @@
     }
   },
   "Baked Bacon": {
+    "img": "placeholder-image.jpg",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -126,6 +136,7 @@
     }
   },
   "Greek Pasta Salad": {
+    "img": "placeholder-image.jpg",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -136,6 +147,7 @@
     }
   },
   "Creamy Orzo and Chicken": {
+    "img": "placeholder-image.jpg",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -146,6 +158,7 @@
     }
   },
   "Crispy Baby Potatoes": {
+    "img": "placeholder-image.jpg",
     "ingredients": [],
     "instructions": [],
     "tags": {

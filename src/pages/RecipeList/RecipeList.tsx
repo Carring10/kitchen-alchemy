@@ -4,6 +4,7 @@ import { MealContext } from "../../Context/mealContext";
 import "./recipeList.css";
 
 interface Recipe {
+  img: string;
   ingredients: string[];
   instructions: string[];
   tags: {
@@ -61,11 +62,13 @@ export const RecipeList = () => {
       </div>
       {filteredRecipes.length > 0 ? (
         filteredRecipes.map(([recipeName, recipeData]) => {
-          const { ingredients, instructions } = recipeData as Recipe;
+          const { img, ingredients, instructions } = recipeData as Recipe;
 
+          {console.log(img)}
           return (
             <div key={recipeName} style={{ marginBottom: "20px" }}>
               <h2>{recipeName}</h2>
+              <img src={`/images/${img}`} alt={recipeName} />
               <h3>Ingredients:</h3>
               <ul>
                 {ingredients.map((ingredient, index) => (
