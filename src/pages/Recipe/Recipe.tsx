@@ -9,18 +9,22 @@ export const Recipe = () => {
   return (
     <>
       <Navbar />
-      <h3>Ingredients:</h3>
-      <ul>
-        {recipeData.ingredients.map((ingredient: string[], index: number) => (
-          <li key={index}>{ingredient}</li>
-        ))}
-      </ul>
-      <h3>Instructions:</h3>
-      <ol>
-        {recipeData.instructions.map((instruction: string[], index: number) => (
-          <li key={index}>{instruction}</li>
-        ))}
-      </ol>
+      <div className="recipe-container">
+        <h2>{recipeData[1]}</h2>
+        <p>{recipeData[0].description}</p>
+        <h3>Ingredients:</h3>
+        <ul>
+          {recipeData[0].ingredients.map((ingredient: string[], index: number) => (
+            <li key={index}>{ingredient}</li>
+          ))}
+        </ul>
+        <h3>Instructions:</h3>
+        <ol>
+          {recipeData[0].instructions.map((instruction: string[], index: number) => (
+            <li key={index}>{instruction}</li>
+          ))}
+        </ol>
+      </div>
     </>
   );
 };

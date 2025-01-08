@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 interface Recipe {
   img: string;
+  description: string;
   ingredients: string[];
   instructions: string[];
   tags: {
@@ -66,7 +67,7 @@ export const RecipeList = () => {
           return (
             <Link
               to="/recipe"
-              state={recipeData}
+              state={[recipeData, recipeName]}
               key={recipeName}
               className="recipe-link"
             >
