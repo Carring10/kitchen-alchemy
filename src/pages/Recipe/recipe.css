@@ -1,0 +1,22 @@
+.recipe-body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.recipe-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.recipe-title-description {
+}
+
+.recipe-title-description h2 {
+  border-bottom: 1px solid black;
+}
+
+.recipe-title-description p {
+  width: 100%;
+}
