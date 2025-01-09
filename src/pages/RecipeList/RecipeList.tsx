@@ -65,13 +65,13 @@ export const RecipeList = () => {
           const { img } = recipeData as Recipe;
 
           return (
-            <Link
-              to="/recipe"
-              state={[recipeData, recipeName]}
-              key={recipeName}
-              className="recipe-link"
-            >
-              <div className="recipe-list-container">
+            <div className="recipe-list-container">
+              <Link
+                to="/recipe"
+                state={[recipeData, recipeName]}
+                key={recipeName}
+                className="recipe-link"
+              >
                 <div key={recipeName} style={{ marginBottom: "20px" }}>
                   <div className="recipe-list-img-container">
                     <h2 className="recipe-name">{recipeName}</h2>
@@ -82,8 +82,8 @@ export const RecipeList = () => {
                     />
                   </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </div>
           );
         })
       ) : (

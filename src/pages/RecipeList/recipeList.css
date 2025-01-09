@@ -6,7 +6,7 @@
 .recipe-list-title {
   font-family: "Sofia", serif;
   font-weight: 400;
-  width: 30%;
+  width: 200px;
 }
 
 .content-separator {
@@ -24,16 +24,26 @@
 
 .recipe-link {
   text-decoration: none; 
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .recipe-list-img-container {
   border: 1px solid black;
   position: relative;
-  width: 100%;
+  width: 800px;
 }
 
 .recipe-list-img {
-  width: 100%;
+  width: 800px;
+  transition: .3s;
+}
+
+.recipe-list-img:hover {
+  webkit-filter: blur(4px); 
+  filter: blur(4px);
 }
 
 .recipe-name {
