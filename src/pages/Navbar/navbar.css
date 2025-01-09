@@ -20,7 +20,7 @@
 }
 
 .underline {
-  border-bottom: 2px solid #d2e6cc;
+  border-bottom: 2px solid #aed1a4;
 }
 
 .search-bar {
@@ -36,7 +36,9 @@
 }
 
 #browse-meal {
-  border-right: 1px solid black;
+  border-left: 1px solid black;
+  font-size: 17px;
+  padding-left: 50px;
 }
 
 .meal-tags {
