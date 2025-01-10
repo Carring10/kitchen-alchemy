@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import recipes from "../../utils/recipes.json";
 import { MealContext } from "../../Context/mealContext";
 import "./recipeList.css";
@@ -7,6 +7,11 @@ import { Link } from "react-router-dom";
 interface Recipe {
   img: string;
   description: string;
+  time: {
+    prepTime: string;
+    cookTime: string;
+  };
+  yield: string;
   ingredients: string[];
   instructions: string[];
   tags: {
@@ -17,12 +22,34 @@ interface Recipe {
   };
 }
 
-type TagCategory = "cuisine" | "ingredient" | "season"; // Define valid tag categories
+type TagCategory = "cuisine" | "ingredient" | "season";
 
 export const RecipeList = () => {
   const { selectedMeal, selectedSubCat } = useContext(MealContext);
+  const [hoverContent, setHoverContent] = useState<null | {
+    recipeName: string;
+    prepTime: string;
+    cookTime: string;
+    yield: string;
+  }>(null);
 
-  const category = selectedSubCat?.activeCategory?.toLowerCase() as TagCategory; // Explicit type cast
+  const handleImgMouseOver = (recipeName: string, recipeData: {
+    time: { prepTime: string; cookTime: string };
+    yield: string;
+  }) => {
+    setHoverContent({
+      recipeName,
+      prepTime: recipeData.time.prepTime,
+      cookTime: recipeData.time.cookTime,
+      yield: recipeData.yield,
+    });
+  };
+
+  const handleMouseOut = () => {
+    setHoverContent(null);
+  };
+
+  const category = selectedSubCat?.activeCategory?.toLowerCase() as TagCategory;
   const subCategory = selectedSubCat?.subCat?.toLowerCase();
 
   const capitalizedSubCat = subCategory.charAt(0).toUpperCase() + subCategory.slice(1);
@@ -38,7 +65,7 @@ export const RecipeList = () => {
     // Match category and subcategory
     const matchCategory =
       category && subCategory
-        ? Array.isArray(tags[category]) // Ensure the category is an array
+        ? Array.isArray(tags[category])
           ? (tags[category] as string[]).some((tag) => tag.toLowerCase() === subCategory)
           : (tags[category] as string)?.toLowerCase() === subCategory
         : true;
@@ -79,7 +106,16 @@ export const RecipeList = () => {
                       src={`/images/${img}`}
                       alt={recipeName}
                       className="recipe-list-img"
+                      onMouseOver={() => handleImgMouseOver(recipeName, recipeData)}
+                      onMouseOut={handleMouseOut}
                     />
+                    {hoverContent && hoverContent.recipeName === recipeName && (
+                      <div className="cooking-info-container" key={recipeName}>
+                        <p className="prep-time"><i className='bx bx-fork'></i> Prep Time: {hoverContent.prepTime}</p>
+                        <p className="cook-time"><i className='bx bxs-time' ></i> Cook Time: {hoverContent.cookTime}</p>
+                        <p className="yield"><i className='bx bxs-dish'></i> Yields: {hoverContent.yield}</p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </Link>

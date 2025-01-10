@@ -1,3 +1,5 @@
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+
 .recipe-list-title-container {
   display: flex;
   align-items: center;
@@ -55,4 +57,19 @@
   top: -1px;
   margin: 0px;
   padding: 10px;
+}
+
+.cooking-info-container {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding-right: 10px;
+  pointer-events: none;
+  animation: fadeIn .3s;
+}
+
+.cooking-info-container p {
+ color: #507746;
+ font-family: "Bona Nova SC", serif;
+ font-size: 15px;
 }

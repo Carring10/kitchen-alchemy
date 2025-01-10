@@ -2,6 +2,11 @@
   "Butternut Squash Soup": {
     "img": "placeholder-image.jpg",
     "description": "This butternut squash soup offers a delightful blend of sweet and savory flavors. The natural sweetness of the roasted butternut squash and caramelized yellow onion pairs beautifully with the earthy warmth of garlic. A hint of nutmeg adds a subtle spice that enhances the soup's richness, while a dash of black pepper balances the sweetness with a gentle kick. Perfect for cozy days, this soup delivers a velvety texture and layers of wholesome taste.",
+    "time": {
+      "prepTime": "15 minutes",
+      "cookTime": "50 minutes"
+    },
+    "yield": "4 generous bowls",
     "ingredients": [
       "1 large butternut squash",
       "olive oil",
@@ -39,6 +44,11 @@
   },
   "Chicken Pot Pie": {
     "img": "placeholder-image.jpg",
+    "time": {
+      "prepTime": "10 minutes",
+      "cookTime": "30 minutes"
+    },
+    "yield": "6 servings",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -50,6 +60,11 @@
   },
   "Roasted Carrot & Ginger Soup": {
     "img": "placeholder-image.jpg",
+    "time": {
+      "prepTime": "15 minutes",
+      "cookTime": "50 minutes"
+    },
+    "yield": "4 generous bowls",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -61,6 +76,11 @@
   },
   "Air Fryer Honey Mustard Salmon": {
     "img": "placeholder-image.jpg",
+    "time": {
+      "prepTime": "15 minutes",
+      "cookTime": "50 minutes"
+    },
+    "yield": "4 generous bowls",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -72,6 +92,11 @@
   },
   "Moussaka (Greek Eggplant Lasagna)": {
     "img": "placeholder-image.jpg",
+    "time": {
+      "prepTime": "15 minutes",
+      "cookTime": "50 minutes"
+    },
+    "yield": "4 generous bowls",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -83,6 +108,11 @@
   },
   "Southwestern Chicken Burritos": {
     "img": "placeholder-image.jpg",
+    "time": {
+      "prepTime": "15 minutes",
+      "cookTime": "50 minutes"
+    },
+    "yield": "4 generous bowls",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -94,6 +124,11 @@
   },
   "Baked Cajun Cabbage and Sausage": {
     "img": "placeholder-image.jpg",
+    "time": {
+      "prepTime": "15 minutes",
+      "cookTime": "50 minutes"
+    },
+    "yield": "4 generous bowls",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -105,6 +140,11 @@
   },
   "Air Fryer Boneless Ribs": {
     "img": "placeholder-image.jpg",
+    "time": {
+      "prepTime": "15 minutes",
+      "cookTime": "50 minutes"
+    },
+    "yield": "4 generous bowls",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -116,6 +156,11 @@
   },
   "Japanese Soft-Scrambled Eggs Over Rice": {
     "img": "placeholder-image.jpg",
+    "time": {
+      "prepTime": "15 minutes",
+      "cookTime": "50 minutes"
+    },
+    "yield": "4 generous bowls",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -127,6 +172,11 @@
   },
   "Baked Bacon": {
     "img": "placeholder-image.jpg",
+    "time": {
+      "prepTime": "15 minutes",
+      "cookTime": "50 minutes"
+    },
+    "yield": "4 generous bowls",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -138,6 +188,11 @@
   },
   "Greek Pasta Salad": {
     "img": "placeholder-image.jpg",
+    "time": {
+      "prepTime": "15 minutes",
+      "cookTime": "50 minutes"
+    },
+    "yield": "4 generous bowls",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -149,6 +204,11 @@
   },
   "Creamy Orzo and Chicken": {
     "img": "placeholder-image.jpg",
+    "time": {
+      "prepTime": "15 minutes",
+      "cookTime": "50 minutes"
+    },
+    "yield": "4 generous bowls",
     "ingredients": [],
     "instructions": [],
     "tags": {
@@ -160,6 +220,11 @@
   },
   "Crispy Baby Potatoes": {
     "img": "placeholder-image.jpg",
+    "time": {
+      "prepTime": "15 minutes",
+      "cookTime": "50 minutes"
+    },
+    "yield": "4 generous bowls",
     "ingredients": [],
     "instructions": [],
     "tags": {
