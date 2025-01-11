@@ -17,6 +17,10 @@ export const Navbar = () => {
         sessionStorage.setItem("meal", "");
         setSelectedMeal("");
       }
+
+      if (window.location.href != "/") {
+        window.location.href = "/";
+      }
     }
   };
 

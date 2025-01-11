@@ -74,7 +74,7 @@ export const RecipeList = () => {
   });
 
   return (
-    <div>
+    <>
       <div className="recipe-list-title-container">
         {selectedMeal || subCategory ? (
           <h1 className="recipe-list-title">
@@ -125,6 +125,6 @@ export const RecipeList = () => {
       ) : (
         <p>No recipes found for the selected meal: {selectedMeal}</p>
       )}
-    </div>
+    </>
   );
 };

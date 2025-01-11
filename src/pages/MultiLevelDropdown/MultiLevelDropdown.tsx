@@ -31,6 +31,10 @@ const MultiLevelDropdown = () => {
       setSelectedMeal("");
     }
 
+    if (window.location.href != "/") {
+      window.location.href = "/";
+    }
+
     handleMenuLeave();
   };
 
@@ -52,6 +56,10 @@ const MultiLevelDropdown = () => {
 
       setSelectedSubCat({ subCat, activeCategory });
       sessionStorage.setItem("subCategory", JSON.stringify({ subCat, activeCategory }));
+
+      if (window.location.href != "/") {
+        window.location.href = "/";
+      }
 
       handleCatLeave();
       handleMenuLeave();
