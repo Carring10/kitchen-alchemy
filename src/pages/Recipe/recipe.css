@@ -56,7 +56,24 @@
   margin: 10px;
 }
 
+.ingredient-contents-container {
+  font-size: 18px;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #6fa588;
+}
+
+
 .recipe-recipe-instructions {
   font-size: 38px;
   margin: 10px;
 }
+
+.instructions-ordered-list {
+  font-size: 18px;
+}
+
+

@@ -38,13 +38,23 @@ export const Recipe = () => {
             <p className="recipe-description">{recipeDescription}</p>
           </div>
           <h3 className="recipe-recipe-ingredients">Ingredients:</h3>
-          <ul>
+          <div>
             {recipeData[0].ingredients.map((ingredient: string[], index: number) => (
-              <li key={index}>{ingredient}</li>
+              <div className="ingredient-contents-container">
+                <label>
+                  <input
+                    id="default-checkbox"
+                    type="checkbox"
+                    key={index}
+                    value={ingredient}
+                  ></input>
+                  {ingredient}
+                </label>
+              </div>
             ))}
-          </ul>
+          </div>
           <h3 className="recipe-recipe-instructions">Instructions:</h3>
-          <ol>
+          <ol className="instructions-ordered-list">
             {recipeData[0].instructions.map((instruction: string[], index: number) => (
               <li key={index}>{instruction}</li>
             ))}
