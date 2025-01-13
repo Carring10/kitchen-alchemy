@@ -6,6 +6,12 @@ import { useLocation } from "react-router-dom";
 export const Recipe = () => {
   const location = useLocation();
   const recipeData = location.state;
+  const recipeName = recipeData[1];
+  const recipeDescription = recipeData[0].description;
+  const cookTime = recipeData[0].time.cookTime;
+  const prepTime = recipeData[0].time.prepTime;
+  const recipeYield = recipeData[0].yield;
+
   console.log(recipeData);
   return (
     <>
@@ -13,8 +19,23 @@ export const Recipe = () => {
       <div className="recipe-body">
         <div className="recipe-container">
           <div className="recipe-title-description">
-            <h2>{recipeData[1]}</h2>
-            <p>{recipeData[0].description}</p>
+            <h2>{recipeName}</h2>
+            <div className="recipe-recipe-info">
+              <p>
+                <span>Prep Time:</span> {prepTime}
+              </p>
+              <p>
+                <span>Cook Time:</span> {cookTime}
+              </p>
+              <p>
+                <span>Yield:</span> {recipeYield}
+              </p>
+              <div>
+                <button>Print</button>
+                <button>Save</button>
+              </div>
+            </div>
+            <p className="recipe-description">{recipeDescription}</p>
           </div>
           <h3>Ingredients:</h3>
           <ul>

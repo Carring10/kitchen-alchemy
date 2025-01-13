@@ -113,7 +113,7 @@ const MultiLevelDropdown = () => {
         id="all-recipes"
         className={dropdownMenu ? "selected" : ""}
       >
-        All Recipes
+        all recipes
       </label>
       {dropdownMenu && showCategories()}
     </div>

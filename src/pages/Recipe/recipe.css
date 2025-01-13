@@ -15,8 +15,34 @@
 
 .recipe-title-description h2 {
   border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  font-size: 35px;
+  margin-bottom: 0px;
 }
 
-.recipe-title-description p {
+.recipe-recipe-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.recipe-recipe-info span {
+  color: gray;
+}
+
+.recipe-recipe-info button {
+  background-color: #6fa588;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.recipe-description {
   width: 100%;
+  font-size: 18px;
+  padding-bottom: 10px;
+  border-bottom: 4px solid black;
 }

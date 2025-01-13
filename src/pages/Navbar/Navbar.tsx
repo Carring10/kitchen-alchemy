@@ -37,7 +37,7 @@ export const Navbar = () => {
           {MultiLevelDropdown()}
           {/* Browse meals */}
           <div className="meal-tags">
-            <p className="emphasis" id="browse-meal">Browse by Meal</p>
+            <p className="emphasis" id="browse-meal">browse by meal :</p>
             {["breakfast", "salad", "soup", "lunch", "dinner"].map((meal) => (
               <a
                 key={meal}
