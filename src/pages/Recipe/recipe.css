@@ -16,7 +16,7 @@
 .recipe-title-description h2 {
   border-bottom: 1px solid black;
   padding-bottom: 10px;
-  font-size: 35px;
+  font-size: 48px;
   margin-bottom: 0px;
 }
 
@@ -24,6 +24,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 14px;
+  margin-top: 10px;
 }
 
 .recipe-recipe-info span {
@@ -36,8 +37,11 @@
   font-size: 18px;
   color: white;
   border: none;
-  margin: 5px;
   cursor: pointer;
+}
+
+.print-button {
+  margin-right: 5px;
 }
 
 .recipe-description {
@@ -45,4 +49,14 @@
   font-size: 18px;
   padding-bottom: 10px;
   border-bottom: 4px solid black;
+}
+
+.recipe-recipe-ingredients {
+  font-size: 38px;
+  margin: 10px;
+}
+
+.recipe-recipe-instructions {
+  font-size: 38px;
+  margin: 10px;
 }

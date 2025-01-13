@@ -15,8 +15,9 @@
 
 .app-header {
   font-weight: 700;
-  font-size: 30px;
+  font-size: 55px;
   font-style: normal;
+  margin: 20px;
 }
 
 .underline {

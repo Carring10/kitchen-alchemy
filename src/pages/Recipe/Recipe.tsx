@@ -31,19 +31,19 @@ export const Recipe = () => {
                 <span>Yield:</span> {recipeYield}
               </p>
               <div>
-                <button>Print</button>
+                <button className="print-button">Print</button>
                 <button>Save</button>
               </div>
             </div>
             <p className="recipe-description">{recipeDescription}</p>
           </div>
-          <h3>Ingredients:</h3>
+          <h3 className="recipe-recipe-ingredients">Ingredients:</h3>
           <ul>
             {recipeData[0].ingredients.map((ingredient: string[], index: number) => (
               <li key={index}>{ingredient}</li>
             ))}
           </ul>
-          <h3>Instructions:</h3>
+          <h3 className="recipe-recipe-instructions">Instructions:</h3>
           <ol>
             {recipeData[0].instructions.map((instruction: string[], index: number) => (
               <li key={index}>{instruction}</li>
