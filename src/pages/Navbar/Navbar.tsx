@@ -6,7 +6,7 @@ import { MealContext } from "../../Context/mealContext";
 export const Navbar = () => {
   const { selectedMeal, setSelectedMeal } = useContext(MealContext);
   const [searchItem, setSearchItem] = useState("");
-  const { searchTerm, setSearchTerm } = useContext(MealContext)
+  const { searchTerm, setSearchTerm } = useContext(MealContext);
 
   const handleInputChange = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.target instanceof HTMLInputElement) {

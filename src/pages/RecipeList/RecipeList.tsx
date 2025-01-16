@@ -25,7 +25,7 @@ interface Recipe {
 type TagCategory = "cuisine" | "ingredient" | "season";
 
 export const RecipeList = () => {
-  const { selectedMeal, selectedSubCat } = useContext(MealContext);
+  const { selectedMeal, selectedSubCat, searchTerm } = useContext(MealContext);
   const [searchFilteredMeals, setSearchFilteredMeals] = useState([]);
 
   const [hoverContent, setHoverContent] = useState<null | {
@@ -75,7 +75,9 @@ export const RecipeList = () => {
           : (tags[category] as string)?.toLowerCase() === subCategory
         : true;
 
-    return matchMeal && matchCategory;
+    const matchSearchFilter = searchTerm ?  _.toLowerCase().includes(searchTerm.toLowerCase()) : true;
+
+    return matchMeal && matchCategory && matchSearchFilter;
   });
 
   return (
