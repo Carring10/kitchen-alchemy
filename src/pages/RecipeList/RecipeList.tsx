@@ -26,6 +26,8 @@ type TagCategory = "cuisine" | "ingredient" | "season";
 
 export const RecipeList = () => {
   const { selectedMeal, selectedSubCat } = useContext(MealContext);
+  const [searchFilteredMeals, setSearchFilteredMeals] = useState([]);
+
   const [hoverContent, setHoverContent] = useState<null | {
     recipeName: string;
     prepTime: string;
@@ -33,10 +35,13 @@ export const RecipeList = () => {
     yield: string;
   }>(null);
 
-  const handleImgMouseOver = (recipeName: string, recipeData: {
-    time: { prepTime: string; cookTime: string };
-    yield: string;
-  }) => {
+  const handleImgMouseOver = (
+    recipeName: string,
+    recipeData: {
+      time: { prepTime: string; cookTime: string };
+      yield: string;
+    }
+  ) => {
     setHoverContent({
       recipeName,
       prepTime: recipeData.time.prepTime,
@@ -111,9 +116,17 @@ export const RecipeList = () => {
                     />
                     {hoverContent && hoverContent.recipeName === recipeName && (
                       <div className="cooking-info-container" key={recipeName}>
-                        <p className="prep-time"><i className='bx bx-fork'></i> Prep Time: {hoverContent.prepTime}</p>
-                        <p className="cook-time"><i className='bx bxs-time' ></i> Cook Time: {hoverContent.cookTime}</p>
-                        <p className="yield"><i className='bx bxs-dish'></i> Yields: {hoverContent.yield}</p>
+                        <p className="prep-time">
+                          <i className="bx bx-fork"></i> Prep Time:{" "}
+                          {hoverContent.prepTime}
+                        </p>
+                        <p className="cook-time">
+                          <i className="bx bxs-time"></i> Cook Time:{" "}
+                          {hoverContent.cookTime}
+                        </p>
+                        <p className="yield">
+                          <i className="bx bxs-dish"></i> Yields: {hoverContent.yield}
+                        </p>
                       </div>
                     )}
                   </div>

@@ -6,16 +6,20 @@ import { MealContext } from "../../Context/mealContext";
 export const Navbar = () => {
   const { selectedMeal, setSelectedMeal } = useContext(MealContext);
   const [searchItem, setSearchItem] = useState("");
-  const [searchFilteredMeals, setSearchFilteredMeals] = useState([]);
+  const { searchTerm, setSearchTerm } = useContext(MealContext)
 
   const handleInputChange = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.target instanceof HTMLInputElement) {
       const searchTerm = event.target.value;
+
       setSearchItem(searchTerm);
+      setSearchTerm(searchTerm); // Context
+
+      sessionStorage.setItem("search", searchTerm);
     }
   };
   
-  console.log(searchItem);
+  // console.log(searchItem);
 
   const handleMealClick = (event: MouseEvent<HTMLAnchorElement>) => {
     if (event.target instanceof HTMLAnchorElement) {

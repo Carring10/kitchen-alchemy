@@ -6,6 +6,8 @@ interface MealContextProps {
   setSelectedMeal: (meal: string) => void;
   selectedSubCat: { subCat: string; activeCategory: string };
   setSelectedSubCat: (subCategory: { subCat: string; activeCategory: string }) => void;
+  searchTerm: string;
+  setSearchTerm: (search: string) => void;
 }
 
 // Create the context with default values
@@ -14,7 +16,9 @@ export const MealContext = createContext<MealContextProps>({
   selectedMeal: "",
   setSelectedMeal: () => {},
   selectedSubCat: { subCat: "", activeCategory: "" },
-  setSelectedSubCat: () => {}
+  setSelectedSubCat: () => {},
+  searchTerm: "",
+  setSearchTerm: () => {}
 });
 
 interface MealContextProviderProps {
@@ -32,6 +36,10 @@ export const MealContextProvider: React.FC<MealContextProviderProps> = ({ childr
     return storedSubCat ? JSON.parse(storedSubCat) : { subCat: "", activeCategory: "" };
   });
 
+  const [searchTerm, setSearchTerm] = useState(
+    () => sessionStorage.getItem("search") || ""
+  );
+
   // Sync the selectedMeal state with sessionStorage
   useEffect(() => {
     sessionStorage.setItem("meal", selectedMeal);
@@ -40,9 +48,14 @@ export const MealContextProvider: React.FC<MealContextProviderProps> = ({ childr
   useEffect(() => {
     sessionStorage.setItem("subCategory", JSON.stringify(selectedSubCat));
   }, [selectedSubCat]);
+
+  useEffect(() => {
+    sessionStorage.setItem("search", searchTerm);
+  }, [searchTerm]);
   
+  console.log("Context", searchTerm)
   return (
-    <MealContext.Provider value={{ selectedMeal, setSelectedMeal, selectedSubCat, setSelectedSubCat }}>
+    <MealContext.Provider value={{ selectedMeal, setSelectedMeal, selectedSubCat, setSelectedSubCat, searchTerm, setSearchTerm }}>
       {children}
     </MealContext.Provider>
   );
