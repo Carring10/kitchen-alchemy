@@ -2,8 +2,14 @@ import { Navbar } from "../Navbar/Navbar";
 import "../../index.css";
 import "./recipe.css";
 import { useLocation } from "react-router-dom";
+import { useRef } from "react";
+import { useReactToPrint } from "react-to-print";
 
 export const Recipe = () => {
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  const reactToPrintFn = useReactToPrint({ contentRef });
+
   const location = useLocation();
   const recipeData = location.state;
   const recipeName = recipeData[1];
@@ -16,7 +22,7 @@ export const Recipe = () => {
   return (
     <>
       <Navbar />
-      <div className="recipe-body">
+      <div className="recipe-body" ref={contentRef}>
         <div className="recipe-container">
           <div className="recipe-title-description">
             <h2>{recipeName}</h2>
@@ -31,7 +37,7 @@ export const Recipe = () => {
                 <span>Yield:</span> {recipeYield}
               </p>
               <div>
-                <button className="print-button">Print</button>
+                <button className="print-button" onClick={() => reactToPrintFn()}>Print</button>
                 <button>Save</button>
               </div>
             </div>
