@@ -26,7 +26,6 @@ type TagCategory = "cuisine" | "ingredient" | "season";
 
 export const RecipeList = () => {
   const { selectedMeal, selectedSubCat, searchTerm } = useContext(MealContext);
-  const [searchFilteredMeals, setSearchFilteredMeals] = useState([]);
 
   const [hoverContent, setHoverContent] = useState<null | {
     recipeName: string;
@@ -60,7 +59,6 @@ export const RecipeList = () => {
   const capitalizedSubCat = subCategory.charAt(0).toUpperCase() + subCategory.slice(1);
 
   // Filter recipes based on selectedMeal
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const filteredRecipes = Object.entries(recipes).filter(([_, recipeData]) => {
     const { tags } = recipeData as Recipe;
 

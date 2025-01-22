@@ -38,7 +38,7 @@ export const Recipe = () => {
             <p className="recipe-description">{recipeDescription}</p>
           </div>
           <h3 className="recipe-recipe-ingredients">Ingredients:</h3>
-          <div>
+          <div className="ingredients-list-container">
             {recipeData[0].ingredients.map((ingredient: string[], index: number) => (
               <div className="ingredient-contents-container">
                 <label>

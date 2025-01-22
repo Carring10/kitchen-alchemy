@@ -2,27 +2,30 @@ import "./navbar.css";
 import MultiLevelDropdown from "../MultiLevelDropdown/MultiLevelDropdown";
 import { MouseEvent, KeyboardEvent, useContext, useState } from "react";
 import { MealContext } from "../../Context/mealContext";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
   const { selectedMeal, setSelectedMeal } = useContext(MealContext);
-  const [searchItem, setSearchItem] = useState("");
-  const { searchTerm, setSearchTerm } = useContext(MealContext);
+  const [search, setSearch] = useState("");
+  const { setSearchTerm } = useContext(MealContext);
+
+  const navigate = useNavigate();
 
   const handleInputChange = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.target instanceof HTMLInputElement) {
       const searchTerm = event.target.value;
+      console.log(searchTerm)
 
-      setSearchItem(searchTerm);
+      setSearch(searchTerm);
       setSearchTerm(searchTerm); // Context
 
       sessionStorage.setItem("search", searchTerm);
     }
   };
   
-  // console.log(searchItem);
-
   const handleMealClick = (event: MouseEvent<HTMLAnchorElement>) => {
     if (event.target instanceof HTMLAnchorElement) {
+      event.preventDefault();
       const mealName = event.target.textContent || "";
 
       setSelectedMeal(mealName); // Update MealContext
@@ -33,8 +36,8 @@ export const Navbar = () => {
         setSelectedMeal("");
       }
 
-      if (window.location.href != "/") {
-        window.location.href = "/";
+      if (window.location.pathname !== "/") {
+        navigate("/");
       }
     }
   };
@@ -51,7 +54,7 @@ export const Navbar = () => {
           <input
             className="search-bar"
             type="text"
-            value={searchItem}
+            value={search}
             onChange={handleInputChange}
             placeholder="Type to search"
           ></input>
@@ -65,14 +68,14 @@ export const Navbar = () => {
               browse by meal :
             </p>
             {["breakfast", "salad", "soup", "lunch", "dinner"].map((meal) => (
-              <a
+              <Link
                 key={meal}
-                href="#"
+                to={"/" + meal}
                 onClick={handleMealClick}
                 className={selectedMeal === meal ? "selected" : ""}
               >
                 {meal}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

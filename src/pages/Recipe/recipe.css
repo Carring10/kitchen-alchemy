@@ -10,9 +10,6 @@
   width: 70%;
 }
 
-.recipe-title-description {
-}
-
 .recipe-title-description h2 {
   border-bottom: 1px solid black;
   padding-bottom: 10px;
@@ -58,6 +55,7 @@
 
 .ingredient-contents-container {
   font-size: 18px;
+  margin-bottom: 5px;
 }
 
 .ingredient-contents-container label {
@@ -79,6 +77,10 @@ input[type="checkbox"] {
 
 .instructions-ordered-list {
   font-size: 18px;
+}
+
+.instructions-ordered-list li {
+  margin-bottom: 15px;
 }
 
 
