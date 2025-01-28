@@ -37,14 +37,16 @@ export const Recipe = () => {
                 <span>Yield:</span> {recipeYield}
               </p>
               <div>
-                <button className="print-button" onClick={() => reactToPrintFn()}>Print</button>
+                <button className="print-button" onClick={() => reactToPrintFn()}>
+                  Print
+                </button>
                 <button>Save</button>
               </div>
             </div>
             <p className="recipe-description">{recipeDescription}</p>
           </div>
-          <h3 className="recipe-recipe-ingredients">Ingredients:</h3>
           <div className="ingredients-list-container">
+            <h3 className="recipe-recipe-ingredients">Ingredients:</h3>
             {recipeData[0].ingredients.map((ingredient: string[], index: number) => (
               <div className="ingredient-contents-container">
                 <label>
@@ -59,12 +61,14 @@ export const Recipe = () => {
               </div>
             ))}
           </div>
-          <h3 className="recipe-recipe-instructions">Instructions:</h3>
-          <ol className="instructions-ordered-list">
-            {recipeData[0].instructions.map((instruction: string[], index: number) => (
-              <li key={index}>{instruction}</li>
-            ))}
-          </ol>
+          <div className="recipe-instructions-container">
+            <h3 className="recipe-recipe-instructions">Instructions:</h3>
+            <ol className="instructions-ordered-list">
+              {recipeData[0].instructions.map((instruction: string[], index: number) => (
+                <li key={index}>{instruction}</li>
+              ))}
+            </ol>
+          </div>
         </div>
       </div>
     </>

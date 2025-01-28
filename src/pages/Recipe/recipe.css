@@ -53,9 +53,13 @@
   margin: 10px;
 }
 
+.ingredients-list-container {
+  margin-bottom: 20px;
+}
+
 .ingredient-contents-container {
   font-size: 18px;
-  margin-bottom: 5px;
+  margin: 10px 15px;
 }
 
 .ingredient-contents-container label {
@@ -69,6 +73,9 @@ input[type="checkbox"] {
   accent-color: #6fa588;
 }
 
+.recipe-instructions-container {
+  margin: 40px 0px;
+}
 
 .recipe-recipe-instructions {
   font-size: 38px;

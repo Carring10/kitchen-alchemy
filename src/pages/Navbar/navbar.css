@@ -1,3 +1,5 @@
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+
 .navbar {
   display: flex;
   flex-direction: column;
@@ -24,8 +26,29 @@
   border-bottom: 2px solid #aed1a4;
 }
 
+.input-container {
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  background-color: transparent;
+  padding: 8px;
+}
+
+.search-icon-button {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  padding: 0px;
+  height: 20px;
+}
+
 .search-bar {
   height: 25px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 15px;
+  padding-left: 10px;
 }
 
 .filter-contents {

@@ -51,13 +51,17 @@ export const Navbar = () => {
             <span className="underline">art</span>
           </p>
           <h1 className="app-header">Kitchen Alchemy</h1>
+          <div className="input-container">
+          <button className="search-icon-button">
+          <i className="bx bx-search"></i>
+          </button>
           <input
             className="search-bar"
             type="text"
             value={search}
             onChange={handleInputChange}
-            placeholder="Type to search"
           ></input>
+          </div>
         </div>
         <div className="filter-contents">
           {/* Browse categories */}
@@ -65,7 +69,7 @@ export const Navbar = () => {
           {/* Browse meals */}
           <div className="meal-tags">
             <p className="emphasis" id="browse-meal">
-              browse by meal :
+              browse by meal : 
             </p>
             {["breakfast", "salad", "soup", "lunch", "dinner"].map((meal) => (
               <Link
