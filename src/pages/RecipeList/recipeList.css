@@ -50,6 +50,7 @@
 
 .recipe-name {
   color: black;
+  background-color: #f1f2f3;
   border: 1px solid black;
   position: absolute;
   z-index: 1;

@@ -47,26 +47,64 @@ export const Recipe = () => {
           </div>
           <div className="ingredients-list-container">
             <h3 className="recipe-recipe-ingredients">Ingredients:</h3>
-            {recipeData[0].ingredients.map((ingredient: string[], index: number) => (
-              <div className="ingredient-contents-container">
-                <label>
-                  <input
-                    id="default-checkbox"
-                    type="checkbox"
-                    key={index}
-                    value={ingredient}
-                  ></input>
-                  {ingredient}
-                </label>
-              </div>
-            ))}
+            {Array.isArray(recipeData[0].ingredients)
+              ? recipeData[0].ingredients.map((ingredient: string, index: number) => (
+                  <div className="ingredient-contents-container" key={index}>
+                    <label>
+                      <input
+                        id={`ingredient-checkbox-${index}`}
+                        type="checkbox"
+                        value={ingredient}
+                      />
+                      {ingredient}
+                    </label>
+                  </div>
+                ))
+              : Object.entries(recipeData[0].ingredients).map(
+                  ([category, items], categoryIndex) => (
+                    <div key={categoryIndex} className="ingredient-category">
+                      <h3>{category}</h3>
+                      {(items as string[]).map((ingredient: string, index: number) => (
+                        <div className="ingredient-contents-container" key={index}>
+                          <label>
+                            <input
+                              id={`ingredient-checkbox-${categoryIndex}-${index}`}
+                              type="checkbox"
+                              value={ingredient}
+                            />
+                            {ingredient}
+                          </label>
+                        </div>
+                      ))}
+                    </div>
+                  )
+                )}
           </div>
           <div className="recipe-instructions-container">
             <h3 className="recipe-recipe-instructions">Instructions:</h3>
             <ol className="instructions-ordered-list">
-              {recipeData[0].instructions.map((instruction: string[], index: number) => (
-                <li key={index}>{instruction}</li>
-              ))}
+              {Array.isArray(recipeData[0].instructions)
+                ? recipeData[0].instructions.map((step: string, index: number) => (
+                    <div className="instruction-contents-container" key={index}>
+                      <p>
+                        <strong>Step {index + 1}: </strong> {step}
+                      </p>
+                    </div>
+                  ))
+                : Object.entries(recipeData[0].instructions).map(
+                    ([category, steps], categoryIndex: number) => (
+                      <div key={categoryIndex} className="instruction-category">
+                        <h3>{category}</h3>
+                        {(steps as string[]).map((step: string, index: number) => (
+                          <div className="instruction-contents-container" key={index}>
+                            <p>
+                              <strong>Step {index + 1}: </strong> {step}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    )
+                  )}
             </ol>
           </div>
         </div>
