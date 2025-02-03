@@ -144,12 +144,12 @@
     }
   },
   "Moussaka (Greek Eggplant Lasagna)": {
-    "img": "placeholder-image.jpg",
+    "img": "moussaka.webp",
     "time": {
       "prepTime": "15 minutes",
       "cookTime": "50 minutes"
     },
-    "yield": "4 generous bowls",
+    "yield": "8 servings",
     "ingredients": {
       "Eggplant": [
         "2lb eggplant",

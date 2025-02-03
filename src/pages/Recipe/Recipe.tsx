@@ -14,6 +14,7 @@ export const Recipe = () => {
   const recipeData = location.state;
   const recipeName = recipeData[1];
   const recipeDescription = recipeData[0].description;
+  const recipeImg = recipeData[0].img;
   const cookTime = recipeData[0].time.cookTime;
   const prepTime = recipeData[0].time.prepTime;
   const recipeYield = recipeData[0].yield;
@@ -23,6 +24,9 @@ export const Recipe = () => {
     <>
       <Navbar />
       <div className="recipe-body" ref={contentRef}>
+        <div className="recipe-img-container">
+          <img className="recipe-img" src={`/images/${recipeImg}`}/>
+        </div>
         <div className="recipe-container">
           <div className="recipe-title-description">
             <h2>{recipeName}</h2>
@@ -82,30 +86,28 @@ export const Recipe = () => {
           </div>
           <div className="recipe-instructions-container">
             <h3 className="recipe-recipe-instructions">Instructions:</h3>
-            <ol className="instructions-ordered-list">
-              {Array.isArray(recipeData[0].instructions)
-                ? recipeData[0].instructions.map((step: string, index: number) => (
-                    <div className="instruction-contents-container" key={index}>
-                      <p>
-                        <strong>Step {index + 1}: </strong> {step}
-                      </p>
+            {Array.isArray(recipeData[0].instructions)
+              ? recipeData[0].instructions.map((step: string, index: number) => (
+                  <div className="instruction-contents-container" key={index}>
+                    <p>
+                      <strong>Step {index + 1}: </strong> {step}
+                    </p>
+                  </div>
+                ))
+              : Object.entries(recipeData[0].instructions).map(
+                  ([category, steps], categoryIndex: number) => (
+                    <div key={categoryIndex} className="instruction-category">
+                      <h3>{category}</h3>
+                      {(steps as string[]).map((step: string, index: number) => (
+                        <div className="instruction-contents-container" key={index}>
+                          <p>
+                            <strong>Step {index + 1}: </strong> {step}
+                          </p>
+                        </div>
+                      ))}
                     </div>
-                  ))
-                : Object.entries(recipeData[0].instructions).map(
-                    ([category, steps], categoryIndex: number) => (
-                      <div key={categoryIndex} className="instruction-category">
-                        <h3>{category}</h3>
-                        {(steps as string[]).map((step: string, index: number) => (
-                          <div className="instruction-contents-container" key={index}>
-                            <p>
-                              <strong>Step {index + 1}: </strong> {step}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    )
-                  )}
-            </ol>
+                  )
+                )}
           </div>
         </div>
       </div>
