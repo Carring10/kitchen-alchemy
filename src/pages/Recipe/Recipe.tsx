@@ -89,9 +89,9 @@ export const Recipe = () => {
             {Array.isArray(recipeData[0].instructions)
               ? recipeData[0].instructions.map((step: string, index: number) => (
                   <div className="instruction-contents-container" key={index}>
-                    <p>
-                      <strong>Step {index + 1}: </strong> {step}
-                    </p>
+                    <div className="instruction-contents">
+                      <div className="number-index">{index + 1} </div> <p>{step}</p>
+                    </div>
                   </div>
                 ))
               : Object.entries(recipeData[0].instructions).map(
@@ -101,7 +101,7 @@ export const Recipe = () => {
                       {(steps as string[]).map((step: string, index: number) => (
                         <div className="instruction-contents-container" key={index}>
                           <p>
-                            <strong>Step {index + 1}: </strong> {step}
+                            <strong>{index + 1} </strong> {step}
                           </p>
                         </div>
                       ))}
