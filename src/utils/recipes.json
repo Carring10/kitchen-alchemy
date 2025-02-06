@@ -117,8 +117,8 @@
   "Air Fryer Honey Mustard Salmon": {
     "img": "air-fryer-honey-mustard-salmon.jpg",
     "time": {
-      "prepTime": "15 minutes",
-      "cookTime": "50 minutes"
+      "prepTime": "10 minutes",
+      "cookTime": "15 minutes"
     },
     "yield": "2 salmon filets",
     "ingredients": [
@@ -219,14 +219,35 @@
     }
   },
   "Southwestern Chicken Burritos": {
-    "img": "placeholder-image.jpg",
+    "img": "southwest-burrito.jpg",
     "time": {
       "prepTime": "15 minutes",
-      "cookTime": "50 minutes"
+      "cookTime": "15 minutes"
     },
-    "yield": "4 generous bowls",
-    "ingredients": [],
-    "instructions": [],
+    "yield": "4 servings",
+    "ingredients": [
+      "2 boneless, skinless chicken breasts",
+      "1 tsp ground coriander",
+      "1 tsp ground cumin",
+      "1 tsp chili powder",
+      "½ tsp salt",
+      "1 tbsp olive oil",
+      "1 cup frozen corn",
+      "1 can (15 oz) black beans, drained and rinsed",
+      "4 large flour tortillas",
+      "2 cups shredded lettuce",
+      "1 cup crushed Fritos or tortilla chips",
+      "½ cup salsa",
+      "½ cup sour cream"
+    ],
+    "instructions": [
+      "Prepare the Chicken: Slice the chicken breasts horizontally to create thin fillets. Season both sides with coriander, cumin, chili powder, and salt.",
+      "Cook the Chicken: Heat olive oil in a skillet over medium heat. Cook the chicken for 3–4 minutes per side or until the internal temperature reaches 165°F. Remove from heat and let cool slightly.",
+      "Heat the Sides: In the same skillet, sauté the frozen corn until slightly charred. Meanwhile, warm the black beans in a small pot over low heat.",
+      "Shred the Chicken: Once cooled, use two forks to shred the chicken into bite-sized pieces.",
+      "Assemble the Wraps: Place a tortilla on a plate. Layer shredded chicken, warm beans, corn, shredded lettuce, and a handful of crushed Fritos.",
+      "Add Toppings & Serve: Drizzle with salsa and a dollop of sour cream. Wrap tightly and enjoy!"
+    ],
     "tags": {
       "meal": ["lunch", "dinner"],
       "cuisine": [],
