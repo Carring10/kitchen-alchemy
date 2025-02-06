@@ -49,6 +49,7 @@
 }
 
 .recipe-name {
+  font-family: "Belanosima", serif;
   color: black;
   background-color: #f1f2f3;
   border: 2px solid black;
@@ -70,7 +71,11 @@
 }
 
 .cooking-info-container p {
- color: #507746;
- font-family: "Bona Nova SC", serif;
+ background-color: #f1f2f3;
+ color: #416d36;
+ border: 1px solid black;
+ text-align: center;
+ padding: 10px;
+ font-family: "Unica One", serif;
  font-size: 15px;
 }

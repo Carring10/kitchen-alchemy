@@ -52,7 +52,8 @@
   padding: 16px;
   font-size: 16px;
   outline: none;
-  font-family: "Bona Nova SC", serif;
+  font-family: "Unica One", serif;
+  font-weight: bold;
 }
 
 #right-arrow {
@@ -79,7 +80,6 @@
   padding: 16px;
   padding-right: 100px;
   text-align: left;
-  font-weight: normal;
 }
 
 .subcategory-item:hover {
