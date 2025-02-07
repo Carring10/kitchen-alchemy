@@ -113,7 +113,8 @@ const MultiLevelDropdown = () => {
         id="all-recipes"
         className={dropdownMenu ? "selected" : ""}
       >
-        all recipes
+        <i className='bx bxs-right-arrow' id="dropdown-right-arrow"></i>
+       all recipes
       </label>
       {dropdownMenu && showCategories()}
     </div>
