@@ -63,7 +63,7 @@
       "¾ cup frozen peas",
       "2 sheets refrigerated pie crust - or one homemade pie crust",
       "1 egg - lightly beaten"
-  ],
+    ],
     "instructions": [
       "Preheat the oven to 425 degrees. Melt the butter in a large skillet, Dutch oven or frying pan set over a medium high heat.",
       "Stir in the onion, carrot and celery, along with a pinch of salt. Cook until the onions are soft and have started to color.",
@@ -75,10 +75,17 @@
       "Let the pie to rest for 10-15 minutes before slicing."
     ],
     "tags": {
-      "meal": ["dinner"],
-      "cuisine": ["southern"],
+      "meal": [
+        "dinner"
+      ],
+      "cuisine": [
+        "southern"
+      ],
       "ingredient": "chicken",
-      "season": ["autumn", "winter"]
+      "season": [
+        "autumn",
+        "winter"
+      ]
     }
   },
   "Roasted Carrot & Ginger Soup": {
@@ -108,10 +115,19 @@
       "Check for seasoning and adjust to your taste."
     ],
     "tags": {
-      "meal": ["lunch", "dinner", "soup"],
-      "cuisine": ["southern"],
+      "meal": [
+        "lunch",
+        "dinner",
+        "soup"
+      ],
+      "cuisine": [
+        "southern"
+      ],
       "ingredient": "vegetable-based",
-      "season": ["autumn", "winter"]
+      "season": [
+        "autumn",
+        "winter"
+      ]
     }
   },
   "Air Fryer Honey Mustard Salmon": {
@@ -137,7 +153,9 @@
       "Dish and serve hot drizzled with the remaining sauce."
     ],
     "tags": {
-      "meal": ["dinner"],
+      "meal": [
+        "dinner"
+      ],
       "cuisine": [],
       "ingredient": "fish",
       "season": []
@@ -153,24 +171,24 @@
     "ingredients": {
       "Eggplant": [
         "2lb eggplant",
-        "1 tsp salt", 
+        "1 tsp salt",
         "2 - 3 tbsp olive oil"
       ],
       "Filling": [
-      "1 tbsp olive oil",
-      "1 onion",
-      "3 garlic cloves (minced)",
-      "1lb ground beef or lamb",
-      "1/2 cup red wine",
-      "14 oz crushed tomatoes",
-      "3 tbsp tomato paste",
-      "1 cup beef broth/stock",
-      "1 beef bouillon cube",
-      "2 bay leaves",
-      "1.5 tsp sugar",
-      "2 tsp dried oregano",
-      "1/2 tsp cinnamon",
-      "3/4 tsp salt"
+        "1 tbsp olive oil",
+        "1 onion",
+        "3 garlic cloves (minced)",
+        "1lb ground beef or lamb",
+        "1/2 cup red wine",
+        "14 oz crushed tomatoes",
+        "3 tbsp tomato paste",
+        "1 cup beef broth/stock",
+        "1 beef bouillon cube",
+        "2 bay leaves",
+        "1.5 tsp sugar",
+        "2 tsp dried oregano",
+        "1/2 tsp cinnamon",
+        "3/4 tsp salt"
       ],
       "Bechamel Sauce": [
         "4 tbsp butter",
@@ -212,8 +230,12 @@
       ]
     },
     "tags": {
-      "meal": ["dinner"],
-      "cuisine": ["european"],
+      "meal": [
+        "dinner"
+      ],
+      "cuisine": [
+        "european"
+      ],
       "ingredient": "vegetable-based",
       "season": []
     }
@@ -249,119 +271,278 @@
       "Add Toppings & Serve: Drizzle with salsa and a dollop of sour cream. Wrap tightly and enjoy!"
     ],
     "tags": {
-      "meal": ["lunch", "dinner"],
+      "meal": [
+        "lunch",
+        "dinner"
+      ],
       "cuisine": [],
       "ingredient": "chicken",
-      "season": ["summer", "spring"]
+      "season": [
+        "summer",
+        "spring"
+      ]
     }
   },
   "Baked Cajun Cabbage and Sausage": {
-    "img": "placeholder-image.jpg",
+    "img": "cajun-cabbage.jpg",
     "time": {
       "prepTime": "15 minutes",
       "cookTime": "50 minutes"
     },
     "yield": "4 generous bowls",
-    "ingredients": [],
-    "instructions": [],
+    "ingredients": [
+      "3 tablespoons unsalted butter",
+      "12 ounces pre-cooked andouille or kielbasa sausage links, sliced into rounds",
+      "1 cup chopped yellow onion",
+      "4 garlic cloves, finely minced",
+      "2 teaspoons packed brown sugar",
+      "1 medium-sized head of green cabbage (about 2 lbs), roughly chopped into pieces",
+      "2 tablespoons apple cider vinegar, sub for red wine vinegar",
+      "2 teaspoons Cajun Seasoning",
+      "1/4 teaspoon ground nutmeg"
+    ],
+    "instructions": [
+      "In a large deep skillet or dutch oven, heat the butter over medium heat. Once the butter is sizzling, add the sausage rounds into the pan in an even single layer. Cook until golden brown, about 3-5 minutes per side. Then use a utensil to transfer the sausage to a plate and set aside.",
+      "Add the chopped onion into the pan and sauté together until the onion becomes translucent and tender, about 2-3 minutes. Then add in the garlic and stir together along with the onion until the garlic is fragrant, about 1-2 minutes.",
+      "Add in the brown sugar and stir together with the onion/garlic until the sugar begins to dissolve.",
+      "Toss in the chopped cabbage- note: depending on the size of your pan, you may need to add in about half of the cabbage first. Then pour in the vinegar and carefully stir together. Cover the pan with a lid to allow the cabbage to steam through until tender, about 3-4 minutes. Then add in any remaining cabbage, if needed, and continue cooking for another 3-4 minutes. ",
+      "Add the cooked sausage rounds back into the pan and seasoning the dish with the Creole Cajun seasoning, nutmeg, and red pepper flakes (if using). Stir everything together to fully combine. Allow the dish to continue cooking together for another 3-5 minutes and then remove from heat.",
+      "Taste the cabbage and sausage and adjust seasoning by adding more Creole Cajun seasoning, if desired. Serve immediately and garnish with freshly chopped parsley if you’d like. Enjoy!"
+    ],
     "tags": {
-      "meal": ["dinner"],
-      "cuisine": ["southern"],
+      "meal": [
+        "dinner"
+      ],
+      "cuisine": [
+        "southern"
+      ],
       "ingredient": "pork",
       "season": []
     }
   },
   "Air Fryer Boneless Ribs": {
-    "img": "placeholder-image.jpg",
+    "img": "air-fryer-ribs.jpg",
     "time": {
       "prepTime": "15 minutes",
       "cookTime": "50 minutes"
     },
-    "yield": "4 generous bowls",
-    "ingredients": [],
-    "instructions": [],
+    "yield": "4 servings",
+    "ingredients": {
+      "Ribs": [
+        "1 lb. Country-Style Pork Ribs",
+        "2 tsp Creole/Cajun Seasoning",
+        "2 tsp Smokehouse Maple Seasoning"
+      ],
+      "BBQ Sauce": [
+        "2 tablespoon Barbecue Sauce",
+        "2 tablespoon Yellow Mustard",
+        "1 tablespoon Black Vinegar (if you can’t find that, just use apple cider vinegar)",
+        "1 tablespoon Brown Sugar"
+      ]
+    },
+    "instructions": [
+      "Mix the ingredients for the dry rub together, and coat each boneless rib in the seasoning. Allow to sit for 24 hours, if you can! At least 1 hour.",
+      "Preheat your air fryer to 325˚, and while the air fryer preheats, drizzle 1 tablespoon olive oil on the ribs. Zhuzh them around so they are evenly coated.",
+      "Place ribs in a single layer to the bottom of the air fryer basket. Air fry at 325˚ for 12 minutes.",
+      "After 12 minutes, flip each rib over and cook again for another 12 minutes.",
+      "While these cook, mix up your barbecue sauce.",
+      "Slather the ribs with the sauce and cook an additional couple of minutes.",
+      "Serve with extra sauce!"
+    ],
     "tags": {
-      "meal": ["dinner"],
+      "meal": [
+        "dinner"
+      ],
       "cuisine": [],
       "ingredient": "pork",
       "season": []
     }
   },
   "Japanese Soft-Scrambled Eggs Over Rice": {
-    "img": "placeholder-image.jpg",
+    "img": "japanese-eggs.jpg",
     "time": {
-      "prepTime": "15 minutes",
-      "cookTime": "50 minutes"
+      "prepTime": "1 minute",
+      "cookTime": "5 minutes"
     },
-    "yield": "4 generous bowls",
-    "ingredients": [],
-    "instructions": [],
+    "yield": "1 bowl",
+    "ingredients": [
+      "3 eggs",
+      "1 tbsp mirin",
+      "1 tsp soy sauce",
+      "¼ tsp salt",
+      "2 tsp sesame oil",
+      "1 spring onion (finely sliced)",
+      "1 tbsp Japanese furikake rice seasoning",
+      "1 cup white rice (cooked - leftover is best)"
+    ],
+    "instructions": [
+      "Cook the rice if you're making it now and keep warm. If you're using leftover rice, reheat in the microwave and keep warm.",
+      "Beat the eggs together with the mirin, soy sauce, salt, pepper and 1 tsp of the sesame oil.",
+      "Heat a small frying pan with the remaining sesame oil until just hot - not too hot, we don't want the egg to cook too quickly.",
+      "Pour the eggs into the pan and leave for a few seconds before stirring. Stir until just set, but still wet then remove from the heat - it will continue cook in the pan.",
+      "Make a bed of the warm rice and then slide the eggs over the rice. Lastly, sprinkle with the spring onion and Japanese rice seasoning and enjoy right away!"
+    ],
     "tags": {
-      "meal": ["breakfast"],
-      "cuisine": ["asian"],
+      "meal": [
+        "breakfast"
+      ],
+      "cuisine": [
+        "asian"
+      ],
       "ingredient": "",
       "season": []
     }
   },
   "Baked Bacon": {
-    "img": "placeholder-image.jpg",
+    "img": "bacon.jpg",
     "time": {
       "prepTime": "15 minutes",
       "cookTime": "50 minutes"
     },
     "yield": "4 generous bowls",
-    "ingredients": [],
-    "instructions": [],
+    "ingredients": [
+      "a pack of bacon"
+    ],
+    "instructions": [
+      "Preheat your oven to 400°F (200°C). Line a baking tray with parchment paper, then place the bacon side-by-side on the tray.",
+      "Cook the bacon for 10 to 20 minutes or until it's reached your desired level of crispiness. Make sure to check on it after about 10 minutes, as some ovens cook faster. Remove the tray from the oven and transfer the bacon with tongs to a paper towel-lined plate."
+    ],
     "tags": {
-      "meal": ["breakfast"],
+      "meal": [
+        "breakfast"
+      ],
       "cuisine": [],
       "ingredient": "pork",
       "season": []
     }
   },
   "Greek Pasta Salad": {
-    "img": "placeholder-image.jpg",
+    "img": "greek-pasta-salad.jpg",
     "time": {
       "prepTime": "15 minutes",
-      "cookTime": "50 minutes"
+      "cookTime": "12 minutes"
     },
     "yield": "4 generous bowls",
-    "ingredients": [],
-    "instructions": [],
+    "ingredients": {
+      "Pasta Salad": [
+        "16 ounces rotini or other medium pasta",
+        "¾ English cucumber diced",
+        "1 pint grape tomatoes halved",
+        "1 bell pepper red or orange, diced",
+        "½ cup sliced pitted olives",
+        "½ cup crumbled feta cheese",
+        "⅓ cup diced red onion"
+      ],
+      "Dressing": [
+        "1 cup Greek dressing"
+      ],
+      "or": [
+        "¼ cup red wine vinegar",
+        "⅓ cup olive oil",
+        "½ teaspoon garlic powder",
+        "1 teaspoon dried oregano",
+        "salt and pepper to taste"
+      ]
+    },
+    "instructions": [
+      "Whisk together dressing ingredients.",
+      "Cook pasta al dente according to package directions. Rinse under cold water.",
+      "Combine all ingredients in a large bowl. Add dressing and toss.",
+      "Refrigerate at least 2 hours before serving."
+    ],
     "tags": {
-      "meal": ["lunch", "dinner"],
-      "cuisine": ["european"],
+      "meal": [
+        "lunch",
+        "dinner"
+      ],
+      "cuisine": [
+        "european"
+      ],
       "ingredient": "pasta",
-      "season": ["spring", "summer"]
+      "season": [
+        "spring",
+        "summer"
+      ]
     }
   },
   "Creamy Orzo and Chicken": {
-    "img": "placeholder-image.jpg",
+    "img": "chicken-orzo.jpg",
     "time": {
       "prepTime": "15 minutes",
       "cookTime": "50 minutes"
     },
     "yield": "4 generous bowls",
-    "ingredients": [],
-    "instructions": [],
+    "ingredients": {
+      "chicken": [
+        "1.5 lb chicken breasts skinless, boneless",
+        "1 teaspoon smoked paprika",
+        "1 teaspoon Italian seasoning",
+        "salt and freshly ground black pepper",
+        "2 tablespoons olive oil"
+      ],
+      "orzo": [
+        "1 cup orzo uncooked",
+        "5 cloves garlic minced",
+        "1 tablespoon olive oil",
+        "10 oz cherry tomatoes sliced in half",
+        "2 cups chicken stock",
+        "¼ teaspoon salt",
+        "5 oz fresh spinach",
+        "½ cup heavy cream",
+        "¼ cup basil pesto"
+      ]
+    },
+    "instructions": {
+      "chicken": [
+        "Slice chicken breasts into thinner strips. Generously season the chicken with smoked paprika, Italian seasoning, salt, and pepper.",
+        "Heat a large, high-sided, heavy-bottomed skillet over medium heat. Add 2 tablespoons of olive oil. Add chicken. Cook the chicken on medium heat for about 3 minutes per side. Remove chicken to a plate."
+      ],
+      "orzo": [
+        "To the same, now empty, skillet, add 1 cup of uncooked orzo, 5 cloves of minced garlic, and 1 tablespoon of olive oil. Cook the orzo on medium heat, stirring, for about 2 minutes until browned.",
+        "Add 2 cups of chicken stock, half of the cherry tomatoes, and ¼ teaspoon of salt. Bring to a boil, then reduce to a simmer and cook for about 5 or 10 minutes, occasionally stirring to prevent the orzo from sticking to the bottom of the pan, until the orzo is cooked through.",
+        "Add spinach and the remaining cherry tomatoes. Stir everything on low-medium heat until the spinach wilts.",
+        "Add heavy cream and basil pesto to the skillet with orzo and veggies and stir to combine. Season with salt and pepper, if desired.",
+        "Return the chicken to the skillet. Allow the chicken to simmer in the sauce to heat through and until the chicken is completely cooked through."
+      ]
+    },
     "tags": {
-      "meal": ["dinner"],
+      "meal": [
+        "dinner"
+      ],
       "cuisine": [],
       "ingredient": "chicken",
       "season": []
     }
   },
   "Crispy Baby Potatoes": {
-    "img": "placeholder-image.jpg",
+    "img": "potatoes.jpg",
     "time": {
       "prepTime": "15 minutes",
       "cookTime": "50 minutes"
     },
     "yield": "4 generous bowls",
-    "ingredients": [],
-    "instructions": [],
+    "ingredients": [
+      "1 1/2 pounds small baby potatoes, red, Yukon gold or multi-color",
+      "3 tablespoons extra virgin olive oil",
+      "1 teaspoon garlic powder",
+      "1 1/4 teaspoons dried Italian seasoning",
+      "1 1/2 tablespoons grated Pecorino Romano or Parmesan cheese",
+      "1/2 teaspoon kosher salt, plus more for topping",
+      "ground black pepper",
+      "olive oil spray"
+    ],
+    "instructions": [
+      "Preheat the oven to 400F and set the rack for the center of the oven. Cut the potatoes in half.",
+      "Drizzle the olive oil on the bottom of the sheet pan, spreading out to evenly cover the bottom.",
+      "Evenly sprinkle the oil with the garlic powder, Italian seasoning, grated cheese, salt and pepper.",
+      "Place the potatoes over the seasoning, cut side down in an even layer. Spritz the tops of the potatoes with olive oil spray and season the tops with a pinch more salt.",
+      "Bake in the center of the oven, 30 to 40 minutes, depending on the size of the potatoes, until the bottoms are golden and the potatoes are tender when pierced with a knife."
+    ],
     "tags": {
-      "meal": ["lunch", "dinner"],
+      "meal": [
+        "lunch",
+        "dinner"
+      ],
       "cuisine": [],
       "ingredient": "vegetable-based",
       "season": []
