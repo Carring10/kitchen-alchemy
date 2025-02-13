@@ -14,7 +14,6 @@ export const Navbar = () => {
   const handleInputChange = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.target instanceof HTMLInputElement) {
       const searchTerm = event.target.value;
-      console.log(searchTerm)
 
       setSearch(searchTerm);
       setSearchTerm(searchTerm); // Context

@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./multileveldropdown.css";
 import { MouseEvent, useContext } from "react";
 import { MealContext } from "../../Context/mealContext";
+import { useNavigate } from "react-router-dom";
 
 type Categories = {
   [key: string]: string[];
@@ -11,6 +12,8 @@ const MultiLevelDropdown = () => {
   const { setSelectedSubCat, setSelectedMeal } = useContext(MealContext);
   const [dropdownMenu, setdropdownMenu] = useState<true | null>(null);
   const [activeCategory, setActiveCategory] = useState<string | "">("");
+
+  const navigate = useNavigate();
 
   const categories: Categories = {
     Cuisine: ["Southern", "Latin", "Asian", "European"],
@@ -31,8 +34,8 @@ const MultiLevelDropdown = () => {
       setSelectedMeal("");
     }
 
-    if (window.location.href != "/") {
-      window.location.href = "/";
+    if (window.location.pathname != "/") {
+      navigate("/");
     }
 
     handleMenuLeave();
@@ -57,8 +60,8 @@ const MultiLevelDropdown = () => {
       setSelectedSubCat({ subCat, activeCategory });
       sessionStorage.setItem("subCategory", JSON.stringify({ subCat, activeCategory }));
 
-      if (window.location.href != "/") {
-        window.location.href = "/";
+      if (window.location.pathname != "/") {
+        navigate("/");
       }
 
       handleCatLeave();

@@ -62,10 +62,12 @@
   color: white;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
+  width: 150px;
 }
 
 .print-button {
-  margin-right: 5px;
+  margin-right: 12px;
 }
 
 .recipe-description {
@@ -98,6 +100,7 @@ input[type="checkbox"] {
   width: 20px;
   height: 20px;
   accent-color: #6fa588;
+  cursor: pointer;
 }
 
 .recipe-instructions-container {
