@@ -137,4 +137,52 @@ input[type="checkbox"] {
   height: 25px;
 }
 
+@media print {
+  h2 {
+    font-size: 20px;
+    font-weight: normal;
+  }
 
+  h3 {
+    font-size: 15px;
+    font-weight: normal;
+  }
+
+  .recipe-body {
+    margin: 0px;
+  }
+
+  .recipe-img-container {
+    display: none;
+  }
+
+  .recipe-container {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+  }
+
+  .recipe-title-description {
+    padding: 0px;
+    background-color: transparent;
+  }
+
+  .recipe-recipe-info {
+    justify-content: space-evenly;
+    margin: none;
+  }
+
+  .recipe-recipe-info button {
+    display: none;
+  }
+
+  .ingredients-list-container {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .recipe-instructions-container {
+    padding: 0px;
+    margin: 0px;
+  }
+}
