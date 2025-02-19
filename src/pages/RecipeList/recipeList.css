@@ -8,7 +8,7 @@
 .recipe-list-title {
   font-family: "Sofia", serif;
   font-weight: 400;
-  width: 200px;
+  width: 400px;
 }
 
 .content-separator {
@@ -36,11 +36,18 @@
   border: 2px solid black;
   position: relative;
   width: 800px;
+  height: 533px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .recipe-list-img {
   width: 800px;
+  height: 533px;
   transition: .3s;
+  padding: 0px;
+  margin: 0px;
+  object-fit: fill;
 }
 
 .recipe-list-img:hover {

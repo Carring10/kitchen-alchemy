@@ -7,10 +7,62 @@ html {
 body {
   padding: 0px;
   margin: 0px;
-  width: 80%;
+  width: 60%;
 }
 
 .emphasis {
   font-family: "Sofia", serif;
   font-weight: 400;
+}
+
+@media (max-width: 1835px) {
+  body {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1572px) {
+  body {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1383px) {
+  body {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1223px) {
+  .app-header {
+    font-size: 45px;
+  }
+
+  .recipe-list-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 1049px) {
+  .app-header {
+    font-size: 35px;
+  }
+
+  .meal-tags {
+    gap: 45px;
+  }
+}
+
+@media (max-width: 961px) {
+  .app-header {
+    font-size: 30px;
+  }
+
+  .meal-tags {
+    gap: 40px;
+  }
+
+  #browse-meal {
+    padding-left: 30px;
+  }
 }
