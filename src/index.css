@@ -66,3 +66,58 @@ body {
     padding-left: 30px;
   }
 }
+
+@media (max-width: 914px) {
+  .app-header {
+    font-size: 25px;
+  }
+
+  .header p {
+    font-size: 13px;
+  }
+
+  .meal-tags {
+    gap: 25px;
+  }
+
+  #browse-meal {
+    padding-left: 30px;
+  }
+
+  .recipe-list-title {
+    font-size: 20px;
+  }
+
+  .recipe-list-img-container {
+    width: 640px;
+    height: 426px;
+  }
+
+  .recipe-list-img {
+    width: 640px;
+    height: 426px;
+  }
+
+  .recipe-name {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 830px) {
+  .meal-tags {
+    font-size: 13px;
+    gap: 20px;
+  }
+
+  #browse-meal {
+    font-size: 15px;
+  }
+
+  #all-recipes {
+    font-size: 14px;
+  }
+
+  .input-container {
+    width: 180px;
+  }
+}
