@@ -155,6 +155,35 @@ body {
   }
 
   .input-container {
-    width: 170px;
+    width: 165px;
+    padding: 7px;
+  }
+
+  .recipe-link {
+    width: 576px;
+    height: 383px;
+  }
+
+  .recipe-list-img-container {
+    width: 576px;
+    height: 383px;
+  }
+
+  .recipe-list-img {
+    width: 576px;
+    height: 383px;
+  }
+}
+
+@media (max-width: 648px) {
+  #all-recipes {
+    display: flex;
+    padding: 0px;
+    align-self: center;
+  }
+
+  #all-recipes i {
+    font-size: 30px;
+    margin: 0px;
   }
 }

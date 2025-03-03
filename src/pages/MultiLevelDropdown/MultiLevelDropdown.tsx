@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./multileveldropdown.css";
 import { MouseEvent, useContext } from "react";
 import { MealContext } from "../../Context/mealContext";
@@ -12,6 +12,39 @@ const MultiLevelDropdown = () => {
   const { setSelectedSubCat, setSelectedMeal } = useContext(MealContext);
   const [dropdownMenu, setdropdownMenu] = useState<true | null>(null);
   const [activeCategory, setActiveCategory] = useState<string | "">("");
+  const [matches, setMatches] = useState(window.matchMedia("(max-width: 648px)").matches);
+
+  useEffect(() => {
+    window
+      .matchMedia("(max-width: 648px)")
+      .addEventListener("change", (e) => setMatches(e.matches));
+  }, []);
+
+  const compactMenu = () => {
+    if (matches) {
+      return (
+        <label
+          htmlFor="categories"
+          onMouseOver={() => handleDropdownMouseOver()}
+          id="all-recipes"
+        >
+          <i className="bx bx-menu" id="dropdown-right-arrow"></i>
+        </label>
+      );
+    } else {
+      return (
+        <label
+          htmlFor="categories"
+          onMouseOver={() => handleDropdownMouseOver()}
+          id="all-recipes"
+          className={dropdownMenu ? "selected" : ""}
+        >
+          <i className="bx bxs-right-arrow" id="dropdown-right-arrow"></i>
+          all recipes
+        </label>
+      );
+    }
+  };
 
   const navigate = useNavigate();
 
@@ -110,15 +143,7 @@ const MultiLevelDropdown = () => {
 
   return (
     <div className="dropdown" onMouseLeave={handleMenuLeave}>
-      <label
-        htmlFor="categories"
-        onMouseOver={() => handleDropdownMouseOver()}
-        id="all-recipes"
-        className={dropdownMenu ? "selected" : ""}
-      >
-        <i className='bx bxs-right-arrow' id="dropdown-right-arrow"></i>
-       all recipes
-      </label>
+      {compactMenu()}
       {dropdownMenu && showCategories()}
     </div>
   );
