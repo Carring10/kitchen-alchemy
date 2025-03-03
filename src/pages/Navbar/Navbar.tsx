@@ -1,6 +1,6 @@
 import "./navbar.css";
 import MultiLevelDropdown from "../MultiLevelDropdown/MultiLevelDropdown";
-import { MouseEvent, KeyboardEvent, useContext, useState } from "react";
+import { MouseEvent, KeyboardEvent, useContext, useState, useEffect } from "react";
 import { MealContext } from "../../Context/mealContext";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -8,6 +8,37 @@ export const Navbar = () => {
   const { selectedMeal, setSelectedMeal } = useContext(MealContext);
   const [search, setSearch] = useState("");
   const { setSearchTerm } = useContext(MealContext);
+  const [matches, setMatches] = useState(window.matchMedia("(max-width: 648px)").matches);
+
+  useEffect(() => {
+    window
+      .matchMedia("(max-width: 648px)")
+      .addEventListener("change", (e) => setMatches(e.matches));
+  }, []);
+
+  const compactNavbar = () => {
+    if (matches) {
+      return (
+        <div className="header-container">
+          <h1 className="app-header">Kitchen Alchemy</h1>
+          <p>
+            cooking is a <span className="underline">science</span>, tasting is an{" "}
+            <span className="underline">art</span>
+          </p>
+        </div>
+      );
+    } else {
+      return (
+        <>
+          <p>
+            cooking is a <span className="underline">science</span>, tasting is an{" "}
+            <span className="underline">art</span>
+          </p>
+          <h1 className="app-header">Kitchen Alchemy</h1>
+        </>
+      );
+    }
+  };
 
   const navigate = useNavigate();
 
@@ -21,7 +52,7 @@ export const Navbar = () => {
       sessionStorage.setItem("search", searchTerm);
     }
   };
-  
+
   const handleMealClick = (event: MouseEvent<HTMLAnchorElement>) => {
     if (event.target instanceof HTMLAnchorElement) {
       event.preventDefault();
@@ -45,21 +76,17 @@ export const Navbar = () => {
     <>
       <div className="navbar">
         <div className="header">
-          <p>
-            cooking is a <span className="underline">science</span>, tasting is an{" "}
-            <span className="underline">art</span>
-          </p>
-          <h1 className="app-header">Kitchen Alchemy</h1>
+          {compactNavbar()}
           <div className="input-container">
-          <button className="search-icon-button">
-          <i className="bx bx-search"></i>
-          </button>
-          <input
-            className="search-bar"
-            type="text"
-            value={search}
-            onChange={handleInputChange}
-          ></input>
+            <button className="search-icon-button">
+              <i className="bx bx-search"></i>
+            </button>
+            <input
+              className="search-bar"
+              type="text"
+              value={search}
+              onChange={handleInputChange}
+            ></input>
           </div>
         </div>
         <div className="filter-contents">
@@ -68,7 +95,7 @@ export const Navbar = () => {
           {/* Browse meals */}
           <div className="meal-tags">
             <p className="emphasis" id="browse-meal">
-              browse by meal : 
+              browse by meal :
             </p>
             {["breakfast", "salad", "soup", "lunch", "dinner"].map((meal) => (
               <Link

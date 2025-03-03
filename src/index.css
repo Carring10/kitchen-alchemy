@@ -176,10 +176,21 @@ body {
 }
 
 @media (max-width: 648px) {
+  .header-container {
+    margin: 30px 0px;
+  }
+
+  .app-header {
+    margin: 0px;
+  }
+
+  .header-container p {
+    margin: 0px;
+  }
+
   #all-recipes {
     display: flex;
     padding: 0px;
-    align-self: center;
   }
 
   #all-recipes i {
