@@ -88,6 +88,11 @@ body {
     font-size: 20px;
   }
 
+  .recipe-link {
+    width: 640px;
+    height: 426px;
+  }
+
   .recipe-list-img-container {
     width: 640px;
     height: 426px;
@@ -119,5 +124,37 @@ body {
 
   .input-container {
     width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 95%;
+  }
+  
+  .app-header {
+    margin: 40px 20px;
+  }
+
+  .meal-tags {
+    font-size: 12px;
+  }
+
+  #all-recipes {
+    font-size: 12px;
+  }
+
+  #browse-meal {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 688px) {
+  .header p {
+    font-size: 11px;
+  }
+
+  .input-container {
+    width: 170px;
   }
 }
