@@ -230,11 +230,11 @@ body {
   }
 
   .filter-contents {
-    gap: 60px;
+    gap: 30px;
   }
 
   .meal-tags {
-    gap: 30px;
+    gap: 10px;
   }
 
   .recipe-link {
@@ -250,5 +250,67 @@ body {
   .recipe-list-img {
     width: 466px;
     height: 311px;
+  }
+}
+
+@media (max-width: 540px) {
+  .meal-tags {
+    gap: 20px;
+  }
+
+  .recipe-link {
+    width: 419px;
+    height: 280px;
+  }
+
+  .recipe-list-img-container {
+    width: 419px;
+    height: 280px;
+  }
+
+  .recipe-list-img {
+    width: 419px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 445px) {
+  .app-header {
+    font-size: 20px;
+  }
+
+  .header-container p {
+    font-size: 10px;
+  }
+
+  .input-container {
+    padding: 5px;
+  }
+
+  #all-recipes i {
+    font-size: 25px;
+  }
+
+  .meal-tags {
+    gap: 10px;
+  }
+
+  .meal-tags a {
+    padding: 4px 8px;
+  }
+
+  .recipe-link {
+    width: 377px;
+    height: 252px;
+  }
+
+  .recipe-list-img-container {
+    width: 377px;
+    height: 252px;
+  }
+
+  .recipe-list-img {
+    width: 377px;
+    height: 252px;
   }
 }
