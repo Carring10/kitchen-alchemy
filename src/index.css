@@ -198,3 +198,57 @@ body {
     margin: 0px;
   }
 }
+
+@media (max-width: 600px) {
+  #browse-meal {
+    padding: 5px 10px;
+  }
+
+  .meal-tags {
+    gap: 10px;
+  }
+
+  .recipe-link {
+    width: 518px;
+    height: 345px;
+  }
+
+  .recipe-list-img-container {
+    width: 518px;
+    height: 345px;
+  }
+
+  .recipe-list-img {
+    width: 518px;
+    height: 345px;
+  }
+}
+
+@media (max-width: 540px) {
+  #browse-meal {
+    display: none;
+  }
+
+  .filter-contents {
+    gap: 60px;
+  }
+
+  .meal-tags {
+    gap: 30px;
+  }
+
+  .recipe-link {
+    width: 466px;
+    height: 311px;
+  }
+
+  .recipe-list-img-container {
+    width: 466px;
+    height: 311px;
+  }
+
+  .recipe-list-img {
+    width: 466px;
+    height: 311px;
+  }
+}
