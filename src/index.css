@@ -399,3 +399,48 @@ body {
     font-size: 15px;
   }
 }
+
+@media (max-width: 330px) {
+  .meal-tags a {
+    font-size: 10px;
+  }
+
+  .dropdown-menu {
+    width: 130px;
+    font-size: 12px;
+  }
+
+  .category-button {
+    font-size: 12px;
+  }
+
+  .subcategory-list {
+    left: 130px;
+    width: 130px;;
+  }
+
+  .recipe-list-container {
+    height: 184px;
+  }
+
+  .recipe-link {
+    width: 275px;
+    height: 184px;
+  }
+
+  .recipe-list-img-container {
+    width: 275px;
+    height: 184px;
+  }
+
+  .recipe-list-img {
+    width: 275px;
+    height: 184px;
+  }  
+
+  @media (max-width: 300px) {
+    #all-recipes i {
+      font-size: 18px;
+    }
+  }
+}
