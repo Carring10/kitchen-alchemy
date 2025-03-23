@@ -25,22 +25,24 @@ export const Recipe = () => {
       <Navbar />
       <div className="recipe-body" ref={contentRef}>
         <div className="recipe-img-container">
-          <img className="recipe-img" src={`/images/${recipeImg}`}/>
+          <img className="recipe-img" src={`/images/${recipeImg}`} />
         </div>
         <div className="recipe-container">
           <div className="recipe-title-description">
             <h2>{recipeName}</h2>
             <div className="recipe-recipe-info">
-              <p>
-                <span>Prep Time:</span> {prepTime}
-              </p>
-              <p>
-                <span>Cook Time:</span> {cookTime}
-              </p>
-              <p>
-                <span>Yield:</span> {recipeYield}
-              </p>
-              <div>
+              <div className="recipe-times">
+                <p>
+                  <span>Prep Time:</span> {prepTime}
+                </p>
+                <p>
+                  <span>Cook Time:</span> {cookTime}
+                </p>
+                <p>
+                  <span>Yield:</span> {recipeYield}
+                </p>
+              </div>
+              <div className="recipe-button-container">
                 <button className="print-button" onClick={() => reactToPrintFn()}>
                   Print
                 </button>
