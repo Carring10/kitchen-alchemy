@@ -1,50 +1,23 @@
-# React + TypeScript + Vite
+# Kitchen Alchemy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple, front-end React + TypeScript website. I made this with the intention to keep all my favorite recipes in one spot. As I experiment more in the kitchen, the list of recipes will grow! 
 
-Currently, two official plugins are available:
+## Features 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Search by Meal:** Look for recipes for breakfast, lunch, or dinner. You can also look for soups and salads. 
+- **Filter by Cuisine, Ingredient, or Season:** Filter recipes by cuisine, ingredient, or season; each with their own subcategories to choose from. If you would like your results to be more specific, you can browse by a meal and a subcategory. For example: "Japanese + Breakfast" or "Autumn + Soup".
+- **Search Bar:** Effortlessly find recipes by name with a seamless and responsive search feature powered by React.
+- **Print Recipe:** Save a physical copy of the recipe.
 
-## Expanding the ESLint configuration
+## Visuals
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Homepage
+![Home Page](public/images/kitchen-alchemy-homepage.png)
+### Recipe
+![Top of Recipe Page](public/images/kitchen-alchemy-recipe1.png)
+![Bottom of Recipe Page](public/images/kitchen-alchemy-recipe2.png)
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- React
+- TypeScript
