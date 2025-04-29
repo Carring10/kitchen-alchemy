@@ -1,6 +1,12 @@
 import "./navbar.css";
 import MultiLevelDropdown from "../MultiLevelDropdown/MultiLevelDropdown";
-import { MouseEvent, KeyboardEvent, useContext, useState, useEffect } from "react";
+import {
+  MouseEvent,
+  useContext,
+  useState,
+  useEffect,
+  ChangeEvent,
+} from "react";
 import { MealContext } from "../../Context/mealContext";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -42,16 +48,14 @@ export const Navbar = () => {
 
   const navigate = useNavigate();
 
-  const handleInputChange = (event: KeyboardEvent<HTMLInputElement>) => {
-    if (event.target instanceof HTMLInputElement) {
-      const searchTerm = event.target.value;
+  function handleInputChange(event: ChangeEvent<HTMLInputElement>) {
+    const searchTerm = event.currentTarget.value;
 
-      setSearch(searchTerm);
-      setSearchTerm(searchTerm); // Context
+    setSearch(searchTerm);
+    setSearchTerm(searchTerm); // Context
 
-      sessionStorage.setItem("search", searchTerm);
-    }
-  };
+    sessionStorage.setItem("search", searchTerm);
+  }
 
   const handleMealClick = (event: MouseEvent<HTMLAnchorElement>) => {
     if (event.target instanceof HTMLAnchorElement) {
