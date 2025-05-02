@@ -1,5 +1,6 @@
 # Kitchen Alchemy
 [*Link to Live Site*](https://kitchenalchemy.netlify.app/)
+
 This is a simple, front-end React + TypeScript website. I made this with the intention to keep all my favorite recipes in one spot. As I experiment more in the kitchen, the list of recipes will grow! 
 
 ## Features 
