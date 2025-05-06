@@ -12,6 +12,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
   const { selectedMeal, setSelectedMeal } = useContext(MealContext);
+  const { setSelectedSubCat } = useContext(MealContext);
   const [search, setSearch] = useState("");
   const { setSearchTerm } = useContext(MealContext);
   const [matches, setMatches] = useState(window.matchMedia("(max-width: 648px)").matches);
@@ -26,7 +27,7 @@ export const Navbar = () => {
     if (matches) {
       return (
         <div className="header-container">
-          <h1 className="app-header">Kitchen Alchemy</h1>
+          <h1 className="app-header" onClick={(event) => handleHomeNavigation(event)}>Kitchen Alchemy</h1>
           <p>
             cooking is a <span className="underline">science</span>, tasting is an{" "}
             <span className="underline">art</span>
@@ -40,7 +41,7 @@ export const Navbar = () => {
             cooking is a <span className="underline">science</span>, tasting is an{" "}
             <span className="underline">art</span>
           </p>
-          <h1 className="app-header">Kitchen Alchemy</h1>
+          <h1 className="app-header" onClick={(event) => handleHomeNavigation(event)}>Kitchen Alchemy</h1>
         </>
       );
     }
@@ -74,6 +75,21 @@ export const Navbar = () => {
         navigate("/");
       }
     }
+  };
+
+  const handleHomeNavigation = (event: MouseEvent<HTMLHeadingElement>) => {
+    if (event.target instanceof HTMLHeadingElement) {
+      setSelectedSubCat({ subCat: "", activeCategory: "" });
+      sessionStorage.removeItem("subCategory");
+
+      sessionStorage.setItem("meal", "");
+      setSelectedMeal("");
+    }
+
+    if (window.location.pathname != "/") {
+      navigate("/");
+    }
+
   };
 
   return (
