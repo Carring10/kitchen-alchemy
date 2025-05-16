@@ -51,6 +51,11 @@ body {
   .meal-tags {
     gap: 45px;
   }
+
+  .recipe-list-img:hover {
+  webkit-filter: none; 
+  filter: none;
+}
 }
 
 @media (max-width: 961px) {

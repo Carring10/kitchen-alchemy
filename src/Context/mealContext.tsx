@@ -53,7 +53,6 @@ export const MealContextProvider: React.FC<MealContextProviderProps> = ({ childr
     sessionStorage.setItem("search", searchTerm);
   }, [searchTerm]);
   
-  console.log("Context", searchTerm)
   return (
     <MealContext.Provider value={{ selectedMeal, setSelectedMeal, selectedSubCat, setSelectedSubCat, searchTerm, setSearchTerm }}>
       {children}

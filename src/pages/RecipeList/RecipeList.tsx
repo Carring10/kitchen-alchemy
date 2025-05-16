@@ -56,8 +56,6 @@ export const RecipeList = () => {
   const category = selectedSubCat?.activeCategory?.toLowerCase() as TagCategory;
   const subCategory = selectedSubCat?.subCat?.toLowerCase();
 
-  // const capitalizedSubCat = subCategory.charAt(0).toUpperCase() + subCategory.slice(1);
-
   // Filter recipes based on selectedMeal
   const filteredRecipes = Object.entries(recipes).filter(([_, recipeData]) => {
     const { tags } = recipeData as Recipe;
