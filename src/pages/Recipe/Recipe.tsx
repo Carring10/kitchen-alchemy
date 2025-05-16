@@ -18,14 +18,29 @@ export const Recipe = () => {
     name: recipeData[1],
     description: recipeData[0].description,
     img: recipeData[0].img,
-    cookTime: recipeData[0].time.cookTime,
-    prepTime: recipeData[0].time.prepTime,
+    ingredients: recipeData[0].ingredients,
+    instructions: recipeData[0].instructions,
+    tags: recipeData[0].tags,
+    time: {
+      cook: recipeData[0].time.cookTime,
+      prep: recipeData[0].time.prepTime,
+    },
     yield: recipeData[0].yield,
   };
 
   const saveRecipe = (event: MouseEvent<HTMLButtonElement>) => {
     if (event.target instanceof HTMLButtonElement) {
-      localStorage.setItem("recipeObject", JSON.stringify(recipe));
+      const existing = JSON.parse(localStorage.getItem("recipes") || "[]");
+
+      const alreadyExists = existing.some(r => r.name === recipe.name);
+      if (alreadyExists) {
+        alert("This recipe is already saved.");
+        return;
+      }
+
+      const updated = [...existing, recipe];
+
+      localStorage.setItem("recipes", JSON.stringify(updated));
     }
   }
 
@@ -43,10 +58,10 @@ export const Recipe = () => {
             <div className="recipe-recipe-info">
               <div className="recipe-times">
                 <p>
-                  <span>Prep Time:</span> {recipe.prepTime}
+                  <span>Prep Time:</span> {recipe.time.prep}
                 </p>
                 <p>
-                  <span>Cook Time:</span> {recipe.cookTime}
+                  <span>Cook Time:</span> {recipe.time.cook}
                 </p>
                 <p>
                   <span>Yield:</span> {recipe.yield}
@@ -63,8 +78,8 @@ export const Recipe = () => {
           </div>
           <div className="ingredients-list-container">
             <h3 className="recipe-recipe-ingredients">Ingredients:</h3>
-            {Array.isArray(recipeData[0].ingredients)
-              ? recipeData[0].ingredients.map((ingredient: string, index: number) => (
+            {Array.isArray(recipe.ingredients)
+              ? recipe.ingredients.map((ingredient: string, index: number) => (
                 <div className="ingredient-contents-container" key={index}>
                   <label>
                     <input
@@ -76,7 +91,7 @@ export const Recipe = () => {
                   </label>
                 </div>
               ))
-              : Object.entries(recipeData[0].ingredients).map(
+              : Object.entries(recipe.ingredients).map(
                 ([category, items], categoryIndex) => (
                   <div key={categoryIndex} className="ingredient-category">
                     <h3>{category}</h3>
@@ -98,15 +113,15 @@ export const Recipe = () => {
           </div>
           <div className="recipe-instructions-container">
             <h3 className="recipe-recipe-instructions">Instructions:</h3>
-            {Array.isArray(recipeData[0].instructions)
-              ? recipeData[0].instructions.map((step: string, index: number) => (
+            {Array.isArray(recipe.instructions)
+              ? recipe.instructions.map((step: string, index: number) => (
                 <div className="instruction-contents-container" key={index}>
                   <div className="instruction-contents">
                     <div className="number-index">{index + 1} </div> <p>{step}</p>
                   </div>
                 </div>
               ))
-              : Object.entries(recipeData[0].instructions).map(
+              : Object.entries(recipe.instructions).map(
                 ([category, steps], categoryIndex: number) => (
                   <div key={categoryIndex} className="instruction-category">
                     <h3>{category}</h3>

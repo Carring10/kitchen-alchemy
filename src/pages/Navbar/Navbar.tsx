@@ -9,6 +9,7 @@ import {
 } from "react";
 import { MealContext } from "../../Context/mealContext";
 import { Link, useNavigate } from "react-router-dom";
+import { SavedRecipes } from "../SavedRecipes/SavedRecipes";
 
 export const Navbar = () => {
   const { selectedMeal, setSelectedMeal } = useContext(MealContext);
@@ -112,6 +113,9 @@ export const Navbar = () => {
         <div className="filter-contents">
           {/* Browse categories */}
           {MultiLevelDropdown()}
+          <div>
+            <Link to="/saved-recipes">Saved Recipes</Link>
+          </div>
           {/* Browse meals */}
           <div className="meal-tags">
             <p className="emphasis" id="browse-meal">
