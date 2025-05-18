@@ -44,7 +44,6 @@ export const Recipe = () => {
     }
   }
 
-  console.log(recipeData);
   return (
     <>
       <Navbar />
