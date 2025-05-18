@@ -2,11 +2,11 @@ import { Navbar } from "../Navbar/Navbar";
 import "../../index.css";
 import "./recipe.css";
 import { useLocation } from "react-router-dom";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useReactToPrint } from "react-to-print";
-import { MouseEvent } from "react";
 
 export const Recipe = () => {
+  const [isSaved, setIsSaved] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
 
   const reactToPrintFn = useReactToPrint({ contentRef });
@@ -28,21 +28,31 @@ export const Recipe = () => {
     yield: recipeData[0].yield,
   };
 
-  const saveRecipe = (event: MouseEvent<HTMLButtonElement>) => {
-    if (event.target instanceof HTMLButtonElement) {
-      const existing = JSON.parse(localStorage.getItem("recipes") || "[]");
+  const existing = JSON.parse(localStorage.getItem("recipes") || "[]") as Recipe[];
 
-      const alreadyExists = existing.some(r => r.name === recipe.name);
-      if (alreadyExists) {
-        alert("This recipe is already saved.");
-        return;
-      }
+  useEffect(() => {
+    const found = existing.some(r => r.name === recipe.name);
 
-      const updated = [...existing, recipe];
+    setIsSaved(found);
+  }, [recipe.name]);
 
-      localStorage.setItem("recipes", JSON.stringify(updated));
+  const toggleSaveRecipe = () => {
+    const alreadyExists = existing.some(r => r.name === recipe.name);
+
+    let updated;
+
+    if (alreadyExists) {
+      // Remove the recipe
+      updated = existing.filter(r => r.name !== recipe.name);
+      setIsSaved(false);
+    } else {
+      // Add the recipe
+      updated = [...existing, recipe];
+      setIsSaved(true);
     }
-  }
+
+    localStorage.setItem("recipes", JSON.stringify(updated));
+  };
 
   return (
     <>
@@ -70,7 +80,7 @@ export const Recipe = () => {
                 <button className="print-button" onClick={() => reactToPrintFn()}>
                   Print
                 </button>
-                <button onClick={(event) => saveRecipe(event)}>Save</button>
+                <button onClick={toggleSaveRecipe}>{isSaved ? "Unsave" : "Save"}</button>
               </div>
             </div>
             <p className="recipe-description">{recipe.description}</p>
