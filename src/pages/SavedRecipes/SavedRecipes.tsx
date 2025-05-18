@@ -1,36 +1,37 @@
 import { Navbar } from "../Navbar/Navbar";
-import "../../index.css";
 import { Link } from "react-router-dom";
+import "../../index.css";
+import "./savedrecipes.css";
 
 
 const savedRecipes = JSON.parse(localStorage.getItem("recipes") || "[]") as Recipe[];
-console.log(savedRecipes.map((recipe, index) => (
-  console.log("map:", recipe)
-)))
 
 export const SavedRecipes = () => {
   return (
     <>
       <Navbar />
-      <div>
-        {savedRecipes.map((recipe, index) => (
-          <div key={index}>
+      <div className="saved-recipes-container">
+        <h2>Your Saved Recipes</h2>
+        <div className="saved-recipes-img-container">
+          {savedRecipes.map((recipe, index) => (
             <Link
               to="/recipe"
               state={[recipe, recipe.name]}
               key={recipe.name}
-              className="recipe-link"
+              className="saved-recipe-link"
             >
-              <img
-                src={`/images/${recipe.img}`}
-                alt={recipe.name}
-                className="recipe-list-img"
-              />
+              <div key={index} className="saved-recipe-container">
+                <h2 className="saved-recipe-name">{recipe.name}</h2>
+                <img
+                  src={`/images/${recipe.img}`}
+                  alt={recipe.name}
+                  className="saved-recipe-list-img"
+                />
+              </div>
             </Link>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-
     </>
   );
 };

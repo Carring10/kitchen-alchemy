@@ -1,0 +1,43 @@
+.saved-recipes-container {
+    width: 100%;
+}
+
+.saved-recipes-img-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px;
+}
+
+/* All Recipes */
+.saved-recipe-container {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+/* One recipe */
+.saved-recipe-list-img {
+    width: 500px;
+    height: 333px;
+    border: 2px solid black;
+}
+
+.saved-recipe-link {
+    margin-bottom: 25px;
+}
+
+.saved-recipe-name {
+    font-family: "Belanosima", serif;
+    color: black;
+    background-color: #f1f2f3;
+    border: 2px solid black;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    margin: 0px;
+    padding: 10px;
+}
