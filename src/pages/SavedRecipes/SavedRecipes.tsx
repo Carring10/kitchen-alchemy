@@ -44,7 +44,7 @@ export const SavedRecipes = () => {
                   />
                 </div>
               </Link>
-              <button className="delete-recipe" onClick={() => deleteRecipeByName(recipe.name)}>delete</button>
+              <button className="delete-recipe" onClick={() => deleteRecipeByName(recipe.name)}><i className='bx bx-trash-alt'></i></button>
             </div>
           ))}
         </div>
