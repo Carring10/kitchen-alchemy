@@ -68,6 +68,10 @@
   padding-left: 50px;
 }
 
+.saved-recipes {
+  color: black;
+}
+
 .meal-tags {
   display: flex;
   gap: 60px;

@@ -28,7 +28,7 @@
 .saved-recipe-container {
     display: flex;
     justify-content: center;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     position: relative;
     margin-bottom: 30px;
 }
@@ -38,6 +38,36 @@
     width: 500px;
     height: 333px;
     border: 2px solid black;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #0000008e;
+}
+
+.saved-recipe-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  color: white;
+  font-family: "Belanosima", serif;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .saved-recipe-link {

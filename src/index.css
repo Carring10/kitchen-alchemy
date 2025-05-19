@@ -38,8 +38,39 @@ body {
     font-size: 45px;
   }
 
+  #all-recipes {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .saved-recipes {
+    font-size: 14px;
+  }
+
   .recipe-list-title {
     font-size: 28px;
+  }
+
+  .saved-recipes-img-container {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .saved-recipe-link-container {
+    width: 504px;
+    height: 337px;
+  }
+}
+
+@media (max-width: 1140px) {
+  #browse-meal {
+    padding-left: 40px;
+  }
+
+  .meal-tags {
+    gap: 40px;
   }
 }
 
@@ -48,14 +79,22 @@ body {
     font-size: 35px;
   }
 
+  #browse-meal {
+    padding-left: 30px;
+  }
+
   .meal-tags {
-    gap: 45px;
+    gap: 35px;
+  }
+
+  .meal-tags a {
+    font-size: 15px;
   }
 
   .recipe-list-img:hover {
-  webkit-filter: none; 
-  filter: none;
-}
+    webkit-filter: none;
+    filter: none;
+  }
 }
 
 @media (max-width: 961px) {
@@ -64,11 +103,15 @@ body {
   }
 
   .meal-tags {
-    gap: 40px;
+    gap: 20px;
   }
 
   #browse-meal {
     padding-left: 30px;
+  }
+
+  .saved-recipe-title {
+    font-size: 28px;
   }
 }
 
@@ -82,11 +125,12 @@ body {
   }
 
   .meal-tags {
-    gap: 25px;
+    gap: 10px;
   }
 
   #browse-meal {
-    padding-left: 30px;
+    padding-left: 10px;
+    font-size: 15px;
   }
 
   .recipe-list-title {
@@ -116,7 +160,7 @@ body {
 @media (max-width: 830px) {
   .meal-tags {
     font-size: 13px;
-    gap: 20px;
+    gap: 10px;
   }
 
   #browse-meal {
@@ -136,7 +180,7 @@ body {
   body {
     width: 95%;
   }
-  
+
   .app-header {
     margin: 40px 20px;
   }
@@ -146,6 +190,10 @@ body {
   }
 
   #all-recipes {
+    font-size: 12px;
+  }
+
+  .saved-recipes {
     font-size: 12px;
   }
 
@@ -162,6 +210,14 @@ body {
   .input-container {
     width: 165px;
     padding: 7px;
+  }
+
+  .meal-tags {
+    gap: 0px;
+  }
+
+  .meal-tags a {
+    font-size: 13px;
   }
 
   .recipe-link {
@@ -193,6 +249,10 @@ body {
     margin: 0px;
   }
 
+  .saved-recipe-title {
+    font-size: 25px;
+  }
+
   #all-recipes {
     display: flex;
     padding: 0px;
@@ -209,8 +269,14 @@ body {
     padding: 5px 10px;
   }
 
-  .meal-tags {
-    gap: 10px;
+  .saved-recipe-list-img {
+    width: 450px;
+    height: 300px;
+  }
+
+  .saved-recipe-link-container {
+    width: 450px;
+    height: 300px;
   }
 
   .recipe-link {
@@ -378,7 +444,8 @@ body {
 
   .subcategory-list {
     left: 151px;
-    width: 150px;;
+    width: 150px;
+    ;
   }
 
   .recipe-list-container {
@@ -421,7 +488,8 @@ body {
 
   .subcategory-list {
     left: 130px;
-    width: 130px;;
+    width: 130px;
+    ;
   }
 
   .recipe-list-container {
@@ -441,7 +509,7 @@ body {
   .recipe-list-img {
     width: 275px;
     height: 184px;
-  }  
+  }
 
   @media (max-width: 300px) {
     #all-recipes i {

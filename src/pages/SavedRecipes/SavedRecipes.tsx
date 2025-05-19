@@ -42,6 +42,9 @@ export const SavedRecipes = () => {
                     alt={recipe.name}
                     className="saved-recipe-list-img"
                   />
+                  <div className="overlay">
+                    <div className="overlay-text">Go to Recipe</div>
+                  </div>
                 </div>
               </Link>
               <button className="delete-recipe" onClick={() => deleteRecipeByName(recipe.name)}><i className='bx bx-trash-alt'></i></button>
