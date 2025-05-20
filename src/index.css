@@ -269,9 +269,18 @@ body {
     padding: 5px 10px;
   }
 
+  .saved-recipes-img-container {
+    margin: 5px !important;
+  }
+
   .saved-recipe-list-img {
-    width: 450px;
-    height: 300px;
+    width: 450px !important;
+    height: 300px !important;
+  }
+
+  .saved-recipe-name {
+    font-size: 20px;
+    left: 1px;
   }
 
   .saved-recipe-link-container {
@@ -295,17 +304,13 @@ body {
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 560px) {
   #browse-meal {
     display: none;
   }
 
-  .filter-contents {
-    gap: 30px;
-  }
-
   .meal-tags {
-    gap: 10px;
+    gap: 0px;
   }
 
   .recipe-link {
@@ -325,10 +330,6 @@ body {
 }
 
 @media (max-width: 540px) {
-  .meal-tags {
-    gap: 20px;
-  }
-
   .recipe-link {
     width: 419px;
     height: 280px;
@@ -342,6 +343,30 @@ body {
   .recipe-list-img {
     width: 419px;
     height: 280px;
+  }
+}
+
+@media (max-width: 540px) {
+  .filter-contents {
+    gap: 0px;
+  }
+
+  .saved-recipe-title {
+    font-size: 20px;
+  }
+
+  .saved-recipe-link-container {
+    width: 405px;
+    height: 270px;
+  }
+
+  .saved-recipes-img-container {
+    margin: 5px !important;
+  }
+
+  .saved-recipe-list-img {
+    width: 405px !important;
+    height: 270px !important;
   }
 }
 
@@ -362,8 +387,12 @@ body {
     font-size: 25px;
   }
 
-  .meal-tags {
-    gap: 10px;
+  .saved-recipes {
+    font-size: 10px;
+  }
+
+  .filter-contents a {
+    font-size: 10px;
   }
 
   .meal-tags a {
@@ -389,6 +418,20 @@ body {
     width: 377px;
     height: 252px;
   }
+
+  .saved-recipe-link-container {
+    width: 365px;
+    height: 243px;
+  }
+
+  .saved-recipe-name {
+    font-size: 15px;
+  }
+
+  .saved-recipe-list-img {
+    width: 365px !important;
+    height: 243px !important;
+  }
 }
 
 @media (max-width: 400px) {
@@ -410,6 +453,22 @@ body {
     width: 339px;
     height: 227px;
   }
+
+  .saved-recipe-link-container {
+    width: 329px;
+    height: 219px;
+  }
+
+  .saved-recipe-list-img {
+    width: 329px !important;
+    height: 219px !important;
+  }
+
+  .delete-recipe {
+    font-size: 20px !important;
+    width: 50px !important;
+    height: 35px !important;
+  }
 }
 
 @media (max-width: 380px) {
@@ -428,14 +487,6 @@ body {
 
   .input-container {
     width: 100%;
-  }
-
-  .filter-contents {
-    gap: 5px;
-  }
-
-  .meal-tags {
-    gap: 5px;
   }
 
   .dropdown-menu {
