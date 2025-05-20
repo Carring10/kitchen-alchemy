@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "../../index.css";
 import "./savedrecipes.css";
+import type { Recipe } from "../RecipeList/RecipeList";
 
 export const SavedRecipes = () => {
   const [savedRecipes, setSavedRecipes] = useState<Recipe[]>([]);

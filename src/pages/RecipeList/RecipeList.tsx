@@ -4,7 +4,8 @@ import { MealContext } from "../../Context/mealContext";
 import "./recipeList.css";
 import { Link } from "react-router-dom";
 
-interface Recipe {
+export interface Recipe {
+  name: string;
   img: string;
   description: string;
   time: {
