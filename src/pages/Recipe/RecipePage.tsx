@@ -1,11 +1,12 @@
 import { Navbar } from "../Navbar/Navbar";
 import "../../index.css";
-import "./recipe.css";
+import "./recipepage.css";
 import { useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { useReactToPrint } from "react-to-print";
+import type { Recipe } from "../RecipeList/RecipeList";
 
-export const Recipe = () => {
+export const RecipePage = () => {
   const [isSaved, setIsSaved] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
 

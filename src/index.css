@@ -92,7 +92,7 @@ body {
   }
 
   .recipe-list-img:hover {
-    webkit-filter: none;
+    -webkit-filter: none;
     filter: none;
   }
 }
